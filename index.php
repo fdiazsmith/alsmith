@@ -34,7 +34,7 @@
         <?php include '_/php/header.php';?>
          <p>Hello world! This is HTML5 Boilerplate.</p>
         <h1>hola</h1>
-        <h1>hola</h1><h1>hola</h1><h1>hola</h1><h1>hola</h1><h1>hola</h1><h1>hola</h1><h1>adios</h1>
+        <h1>hola</h1><h1>hola</h1><h1>hola</h1><h1>hola</h1><h1>hola</h1><h1>supque mas</h1><h1>adios</h1>
         
         <script src="_/js/allScripts-ck.js"></script>
 

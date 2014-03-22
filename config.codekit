@@ -18,13 +18,21 @@
 		"outputAbbreviatedPath": "\/_\/js\/allScripts-ck.js",
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 2,
-		"syntaxCheckerStyle": 0
+		"syntaxCheckerStyle": 1
 		},
 	"\/_\/css\/bootstrap.css": {
 		"fileType": 16,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_\/css\/bootstrap.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/_\/css\/main.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_\/css\/main.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
@@ -37,6 +45,14 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/_\/php\/header.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_\/php\/header.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
 		},
 	"\/bower_components\/bootstrap\/dist\/css\/bootstrap-theme.css": {
 		"fileType": 16,
@@ -2130,6 +2146,36 @@
 		"inputAbbreviatedPath": "\/bower_components\/normalize-css\/README.md",
 		"outputAbbreviatedPath": "\/bower_components\/normalize-css\/README.html",
 		"outputPathIsSetByUser": 0
+		},
+	"\/imgs\/ilustracion.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.82054e+06,
+		"inputAbbreviatedPath": "\/imgs\/ilustracion.jpg",
+		"outputAbbreviatedPath": "\/imgs\/ilustracion.jpg",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/imgs\/img_central.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 187586,
+		"inputAbbreviatedPath": "\/imgs\/img_central.jpg",
+		"outputAbbreviatedPath": "\/imgs\/img_central.jpg",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/imgs\/logo.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16857,
+		"inputAbbreviatedPath": "\/imgs\/logo.jpg",
+		"outputAbbreviatedPath": "\/imgs\/logo.jpg",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/index.php": {
 		"fileType": 8192,
