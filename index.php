@@ -14,14 +14,11 @@
 
     <title>ALSmith y Asociados</title>
 
+    <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="_/css/main.css">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="_/css/main.css">
-
-    <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
-
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -37,41 +34,52 @@
     <?php include '_/php/header.php';?>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" role="button">Learn more »</a></p>
-      </div>
-    </div>
 
+
+<main> 
+    <?php include '_/php/jumbotron.php';?>
+     
     <div class="container">
+
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-        </div>
+      <div class="list-group col-md-2">
+        <a href="#" class="list-group-item active">Que hacemos? </a>
+        <a href="#como" class="list-group-item">Como lo hacemos?</a>
+        <a href="#experiencia" class="list-group-item">Experience</a>
+        <a href="#valores" class="list-group-item">Valores</a>
+      </div>
+        <div class="contenido-wrapper col-md-9">
+          <div class="explicacion" id="que-hacemos">
+            <h2>Que hacemos?</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+          </div> <!-- explicacion -->
+            <div class="explicacion" id="como">
+            <h2>Como lo hacemos?</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+          </div> <!-- explicacion -->
+            <div class="explicacion" id="experiencia">
+            <h2>Experiencia</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+          </div> <!-- explicacion -->
+            <div class="explicacion" id="valores">
+            <h2>Valores</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+          </div> <!-- explicacion -->
+        </div> <!-- clss -->
       </div>
 
       <hr>
 
-      <footer>
-        <p>© Company 2014</p>
+      <footer style="position: fixed;">
+        <p>© ALSmith y Associados</p>
       </footer>
     </div> <!-- /container -->
-
+</main>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

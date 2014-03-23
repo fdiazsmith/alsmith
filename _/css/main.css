@@ -19,7 +19,7 @@ font-family: 'Josefin Slab', serif;
 font-family: 'Alegreya Sans', sans-serif;
 */
 body{
-font-family: 'Alegreya Sans', sans-serif;
+font-family: 'Alegreya Sans', sans-serif !important;
 
 }
 
@@ -73,9 +73,10 @@ header{
 }
 @media (max-width: 768px){
   .brand img{
-    display: none;
+ 
   }
 }
+
 @media (min-width: 768px){
   header{
 
@@ -175,6 +176,28 @@ $$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
 main{
 
 }
+
+
+.jumbotron{
+  padding-top: 95px !important;
+}
+.autor{
+  text-align: right;
+}
+.frases{
+  
+}
+
+.contenido-wrapper{
+  height: 300px;
+  overflow-y: scroll; 
+}
+
+.explicacion{
+  margin-bottom: 150px;
+}
+
+
 
 .img-central{
 

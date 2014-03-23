@@ -2,14 +2,6 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "16877",
 "files": {
-	"\/_\/components\/css\/all.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_\/components\/css\/all.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsSetByUser": 0
-		},
 	"\/_\/components\/css\/test.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -37,15 +29,7 @@
 		"outputAbbreviatedPath": "\/_\/js\/allScripts-ck.js",
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 2,
-		"syntaxCheckerStyle": 1
-		},
-	"\/_\/css\/bootstrap.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_\/css\/bootstrap.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsSetByUser": 0
+		"syntaxCheckerStyle": 0
 		},
 	"\/_\/css\/main.css": {
 		"fileType": 16,
@@ -117,7 +101,7 @@
 		},
 	"\/bower_components\/bootstrap\/dist\/js\/bootstrap.min.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/dist\/js\/bootstrap.min.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/dist\/js\/min\/bootstrap.min-ck.js",
@@ -177,7 +161,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/affix.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/affix.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/affix-ck.js",
@@ -187,7 +171,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/alert.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/alert.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/alert-ck.js",
@@ -197,7 +181,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/button.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/button.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/button-ck.js",
@@ -207,7 +191,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/carousel.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/carousel.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/carousel-ck.js",
@@ -217,7 +201,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/collapse.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/collapse.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/collapse-ck.js",
@@ -227,7 +211,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/dropdown.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/dropdown.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/dropdown-ck.js",
@@ -237,7 +221,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/modal.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/modal.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/modal-ck.js",
@@ -247,7 +231,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/popover.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/popover.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/popover-ck.js",
@@ -257,7 +241,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/scrollspy.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/scrollspy.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/scrollspy-ck.js",
@@ -267,7 +251,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/tab.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/tab.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/tab-ck.js",
@@ -277,7 +261,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/tooltip.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/tooltip.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/tooltip-ck.js",
@@ -287,7 +271,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/transition.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/transition.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/transition-ck.js",
@@ -1075,215 +1059,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/test-infra\/README.md",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/test-infra\/README.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/html5-boilerplate\/404.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/404.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/html5-boilerplate\/apple-touch-icon-precomposed.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1226,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/apple-touch-icon-precomposed.png",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/apple-touch-icon-precomposed.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/bower_components\/html5-boilerplate\/CHANGELOG.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/CHANGELOG.md",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/CHANGELOG.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/html5-boilerplate\/CONTRIBUTING.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/CONTRIBUTING.md",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/CONTRIBUTING.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/html5-boilerplate\/doc\/crossdomain.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/crossdomain.md",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/crossdomain.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/html5-boilerplate\/doc\/css.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/css.md",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/css.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/html5-boilerplate\/doc\/extend.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/extend.md",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/extend.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/html5-boilerplate\/doc\/faq.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/faq.md",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/faq.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/html5-boilerplate\/doc\/html.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/html.md",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/html.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/html5-boilerplate\/doc\/js.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/js.md",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/js.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/html5-boilerplate\/doc\/misc.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/misc.md",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/misc.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/html5-boilerplate\/doc\/TOC.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/TOC.md",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/TOC.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/html5-boilerplate\/doc\/usage.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/usage.md",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/doc\/usage.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/html5-boilerplate\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/html5-boilerplate\/js\/main.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/js\/main.js",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/js\/min\/main-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/bower_components\/html5-boilerplate\/js\/plugins.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/js\/plugins.js",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/js\/min\/plugins-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/bower_components\/html5-boilerplate\/js\/vendor\/jquery-1.10.2.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/js\/vendor\/jquery-1.10.2.min.js",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/js\/vendor\/min\/jquery-1.10.2.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/bower_components\/html5-boilerplate\/js\/vendor\/modernizr-2.6.2.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/js\/vendor\/modernizr-2.6.2.min.js",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/js\/vendor\/min\/modernizr-2.6.2.min-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/bower_components\/html5-boilerplate\/LICENSE.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/LICENSE.md",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/LICENSE.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/html5-boilerplate\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/README.md",
-		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/README.html",
 		"outputPathIsSetByUser": 0
 		},
 	"\/bower_components\/jquery\/dist\/jquery.js": {
@@ -2195,34 +1970,12 @@
 		"outputAbbreviatedPath": "\/imgs\/logo.jpg",
 		"outputPathIsSetByUser": 0,
 		"processed": 0
-		},
-	"\/index.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/index.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsSetByUser": 0
 		}
 	},
 "hooks": [
 	],
 "lastSavedByUser": "Fernando",
 "manualImportLinks": {
-	"\/_\/components\/js\/allScripts.js": [
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/jquery\/dist\/jquery.min.js",
-			"position": 0,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/dist\/js\/bootstrap.min.js",
-			"position": 1,
-			"type": 0
-			}
-		]
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
