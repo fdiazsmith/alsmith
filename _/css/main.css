@@ -19,7 +19,8 @@ font-family: 'Josefin Slab', serif;
 font-family: 'Alegreya Sans', sans-serif;
 */
 body{
-	font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Alegreya Sans', sans-serif;
+
 }
 
 a{
@@ -40,22 +41,63 @@ a:hover{
 */
 header{
 
-    background-color:rgb(250, 209, 209);
+  background-color: white !important;
 }
+.Al{
+  font-weight: 900;
+  font-size: 40px;
+  font-style: italic;
+  color: rgb(209,209,209);
 
+}
+.brand{
+  position: relative;
+}
+.Smith{
+  position: relative;
+  font-weight: 900;
+  font-size: 25px;
+  top: -6px;
+  margin-left: -37px;
+  padding-bottom: -11px;
+  color: rgb(56, 46, 114);
+
+}
+.associados{
+    position: relative;
+     margin-left: -35px;
+  font-weight: 400;
+  font-size: 8px;
+  font-style: italic;
+  color: rgb(180,180,180);
+}
 @media (max-width: 768px){
-  header{
-    background-color:whitesmoke;
+  .brand img{
+    display: none;
   }
 }
 @media (min-width: 768px){
   header{
-      background-color:whitesmoke;
+
+     height: 83px;
   }
+  #nav-links{
+    margin: 40px 0px 0px 0px;
+  }
+
   .brand{
+    background-image: url("../../imgs/logo.jpg");
+    background-position: 50% 50%;
+    width: 259px;
+    height: 110px;
+    top: -13px;
+    position: relative;
+    -ms-transform: scale(0.6 , 0.6);
+    -webkit-transform: scale(0.6 , 0.6);
+    transform: scale(0.6 , 0.6);
   }
   .navbar-brand{
-
+    opacity: 0;
   }
 }
 
