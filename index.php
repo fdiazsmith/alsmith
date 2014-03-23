@@ -13,7 +13,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
-        <link rel="stylesheet" href="_/css/bootstrap.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="_/css/main.css">
          <!-- <script src="js/vendor/modernizr-2.6.2.min.js"></script> -->
 
@@ -35,9 +35,15 @@
          <p>Hello world! This is HTML5 Boilerplate.</p>
         <h1>hola</h1>
         <h1>hola</h1><h1>hola</h1><h1>hola</h1><h1>hola</h1><h1>hola</h1><h1>supque mas</h1><h1>adios</h1>
-        
-        <script src="_/js/allScripts-ck.js"></script>
+        <h1>hola</h1><h1>supque mas</h1><h1>adios</h1>
+        <h1>hola</h1><h1>supque mas</h1><h1>adios</h1>
+        <h1>hola</h1><h1>supque mas</h1><h1>adios</h1>
 
+        
+        
+        <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script>
+         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
+        <script src="_/js/allScripts-ck.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

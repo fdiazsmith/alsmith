@@ -10,6 +10,25 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
+	"\/_\/components\/css\/test.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_\/components\/css\/test.less",
+		"outputAbbreviatedPath": "\/_\/components\/css\/test.css",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/_\/components\/js\/allScripts.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -98,7 +117,7 @@
 		},
 	"\/bower_components\/bootstrap\/dist\/js\/bootstrap.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/dist\/js\/bootstrap.min.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/dist\/js\/min\/bootstrap.min-ck.js",
@@ -158,7 +177,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/affix.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/affix.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/affix-ck.js",
@@ -168,7 +187,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/alert.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/alert.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/alert-ck.js",
@@ -178,7 +197,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/button.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/button.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/button-ck.js",
@@ -188,7 +207,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/carousel.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/carousel.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/carousel-ck.js",
@@ -198,7 +217,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/collapse.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/collapse.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/collapse-ck.js",
@@ -208,7 +227,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/dropdown.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/dropdown.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/dropdown-ck.js",
@@ -218,7 +237,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/modal.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/modal.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/modal-ck.js",
@@ -228,7 +247,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/popover.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/popover.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/popover-ck.js",
@@ -238,7 +257,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/scrollspy.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/scrollspy.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/scrollspy-ck.js",
@@ -248,7 +267,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/tab.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/tab.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/tab-ck.js",
@@ -258,7 +277,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/tooltip.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/tooltip.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/tooltip-ck.js",
@@ -268,7 +287,7 @@
 		},
 	"\/bower_components\/bootstrap\/js\/transition.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/transition.js",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/js\/min\/transition-ck.js",
@@ -2193,80 +2212,14 @@
 	"\/_\/components\/js\/allScripts.js": [
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/js\/affix.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/jquery\/dist\/jquery.min.js",
 			"position": 0,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/js\/alert.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/dist\/js\/bootstrap.min.js",
 			"position": 1,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/js\/button.js",
-			"position": 2,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/js\/carousel.js",
-			"position": 3,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/js\/collapse.js",
-			"position": 4,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/js\/modal.js",
-			"position": 5,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/js\/scrollspy.js",
-			"position": 6,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/js\/transition.js",
-			"position": 7,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/js\/tab.js",
-			"position": 8,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/js\/tooltip.js",
-			"position": 9,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/js\/popover.js",
-			"position": 10,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/bootstrap\/js\/dropdown.js",
-			"position": 11,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/jquery\/dist\/jquery.min.js",
-			"position": 12,
 			"type": 0
 			}
 		]
