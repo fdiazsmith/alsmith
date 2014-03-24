@@ -44,7 +44,11 @@ header{
   font-size: 18px;
   background-color: white !important;
 }
+.als{
+  font-family: 'Alegreya Sans', sans-serif !important;
+}
 .Al{
+
   font-weight: 900;
   font-size: 40px;
   font-style: italic;
