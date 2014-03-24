@@ -16,7 +16,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right " id="nav-links">
       <ul class="nav navbar-nav navbar-left ">
-        <li class="nav-button "><a href="#"> <span class="glyphicon glyphicon-pause"></span>Servicios</a></li>
+        <li class="nav-button "><a href="#">Servicios</a></li>
         <li class="nav-button"><a href="#">Metodología</a></li>
         <li class="nav-button"><a href="#">Ana Luz</a></li>
         <li class="nav-button"><a href="#">English</a></li>

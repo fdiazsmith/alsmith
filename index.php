@@ -13,7 +13,7 @@
     <!-- <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> -->
 
     <title>ALSmith y Asociados</title>
-
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,700|Alegreya+Sans:100,400,700,900,100italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
         <link rel="stylesheet" href="_/css/main.css">
     <!-- Bootstrap core CSS -->
@@ -38,46 +38,61 @@
 
 <main> 
     <?php include '_/php/jumbotron.php';?>
-     
-    <div class="container">
+ 
 
       <!-- Example row of columns -->
-      <div class="row">
-      <div class="list-group col-md-2">
-        <a href="#" class="list-group-item active">Que hacemos? </a>
-        <a href="#como" class="list-group-item">Como lo hacemos?</a>
-        <a href="#experiencia" class="list-group-item">Experience</a>
-        <a href="#valores" class="list-group-item">Valores</a>
-      </div>
-        <div class="contenido-wrapper col-md-9">
-          <div class="explicacion" id="que-hacemos">
+      <div class="row content">
+        <div class="nav nav-stacked affix-top col-xs-12 col-sm-3 col-sm-offset-0
+                                          col-md-2 col-md-offset-1" id="side-nav">
+          <div class="list-group   nav nav-stacked" >
+            <a href="#" class="list-group-item active">Que hacemos? </a>
+            <a href="#como" class="list-group-item">Como lo hacemos?</a>
+            <a href="#experiencia" class="list-group-item">Experience</a>
+            <a href="#valores" class="list-group-item">Valores</a>
+          </div> <!-- list group -->
+        </div>
+
+      <section class="descropcion-wrapper">
+        <div class="descripcion ">
+          
+            <div class="explicacion col-sm-7 col-sm-offset-3" id="que-hacemos">
             <h2>Que hacemos?</h2>
             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+           
           </div> <!-- explicacion -->
-            <div class="explicacion" id="como">
+        </div><!-- descripcion -->
+        <div class="descripcion ">
+            <div class="explicacion col-sm-7 col-sm-offset-3" id="como">
             <h2>Como lo hacemos?</h2>
             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+           
           </div> <!-- explicacion -->
-            <div class="explicacion" id="experiencia">
+        </div><!-- descripcion -->
+        <div class="descripcion ">
+          
+            <div class="explicacion col-sm-7 col-sm-offset-3" id="experiencia">
             <h2>Experiencia</h2>
             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+           
           </div> <!-- explicacion -->
-            <div class="explicacion" id="valores">
+          </div><!-- descripcion -->
+        <div class="descripcion ">
+          
+            <div class="explicacion col-sm-7 col-sm-offset-3" id="valores">
             <h2>Valores</h2>
             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+           
           </div> <!-- explicacion -->
-        </div> <!-- clss -->
-      </div>
+        </div><!-- descripcion -->
+      </section>
 
-      <hr>
+      </div><!-- row content -->
 
-      <footer style="position: fixed;">
+
+<!-- 
+      <footer class="navbar-bottom" style="position: fixed;">
         <p>© ALSmith y Associados</p>
-      </footer>
+      </footer> -->
     </div> <!-- /container -->
 </main>
 
