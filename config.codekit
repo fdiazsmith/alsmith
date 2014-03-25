@@ -49,6 +49,16 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/_\/js\/main.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_\/js\/main.js",
+		"outputAbbreviatedPath": "\/_\/js\/min\/main-ck.js",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/_\/php\/header.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -62,6 +72,14 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_\/php\/jumbotron.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/_\/php\/landing.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_\/php\/landing.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
@@ -334,7 +352,7 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/less\/bootstrap.less",
-		"outputAbbreviatedPath": "\/_\/css\/bootstrap.css",
+		"outputAbbreviatedPath": "\/_\/css\/bootstrap-min.css",
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 2,
 		"relativeURLS": 0,
@@ -2156,7 +2174,7 @@
 	"javascriptOutputStyle": 1,
 	"javascriptOutputSuffix": "-ck",
 	"javascriptSyntaxCheckerStyle": 1,
-	"jsCheckerReservedNamesString": "",
+	"jsCheckerReservedNamesString": "console",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,
