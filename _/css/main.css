@@ -1,4 +1,38 @@
 
+.landing-wrapper{
+  position: relative;
+  widows: 100%;
+  height: 900px;
+  background-color: rgb(255,255,255);
+  z-index: 10000;
+  color:   color: rgb(56, 46, 114);
+
+  
+}
+.landing-wrapper .background{
+    margin: 0px 50px 20px 50px;
+    opacity: 0;
+
+}
+.logo{
+  padding: 20% 0px 0px 0px;
+}
+.contacto-title{
+  padding-top: 20px;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+.content{
+
+  font-family: 'Josefin Slab', serif;
+}
+.content p{
+  margin-left: 3%;
+  margin-top: 20px;
+}
+.land-line{
+  height: 2px;
+  background-color: rgb(26,26,26); 
+}
 /*
   _______  _______ .__   __.  _______ .______          ___       __      
  /  _____||   ____||  \ |  | |   ____||   _  \        /   \     |  |     
