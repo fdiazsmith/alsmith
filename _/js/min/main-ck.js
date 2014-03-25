@@ -1,0 +1,1 @@
+var $window=$(window);$(window).load(function(){var n=$window.height();$(".landing-wrapper").css("min-height",n+"px"),$(".landing-wrapper .background").animate({opacity:"1"},"slow"),$(".landing-wrapper").on("click",function(){$(".landing-wrapper").fadeOut()}),console.log("hola")});
