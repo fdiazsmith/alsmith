@@ -18,7 +18,8 @@
         <link rel="stylesheet" href="_/css/main.css">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="_/css/bootstrap-min.css">
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -30,6 +31,7 @@
   </head>
 
   <body>
+    <?php include '_/php/landing.php';?>
     <!-- HEADER -->
     <?php include '_/php/header.php';?>
 
@@ -101,6 +103,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="_/js/main.js"></script>
   
 
 </body></html>
