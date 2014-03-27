@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"> -->
     <link rel="stylesheet" href="_/css/bootstrap-min.css">
+
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -30,7 +31,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body style="overflow-x: hidden;">
     <?php include '_/php/landing.php';?>
     <!-- HEADER -->
     <?php include '_/php/header.php';?>
@@ -44,8 +45,9 @@
 
       <!-- Example row of columns -->
       <div class="row content">
-        <div class="nav nav-stacked affix-top col-xs-12 col-sm-3 col-sm-offset-0
-                                          col-md-2 col-md-offset-1" id="side-nav">
+        <div class="nav nav-stacked  col-xs-12 col-sm-3 col-sm-offset-0
+                                          col-md-2 col-md-offset-1" id="side-nav"
+                                          data-spy="affix" data-offset-top="60">
           <div class="list-group   nav nav-stacked" >
             <a href="#" class="list-group-item active">Que hacemos? </a>
             <a href="#como" class="list-group-item">Como lo hacemos?</a>

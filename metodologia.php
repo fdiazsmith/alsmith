@@ -17,8 +17,9 @@
     <!-- Custom styles for this template -->
         <link rel="stylesheet" href="_/css/main.css">
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+    <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="_/css/bootstrap-min.css">
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -41,28 +42,22 @@
  
 
       <!-- Example row of columns -->
-      <div class="row content">
-        <div class="nav nav-stacked affix-top col-xs-12 col-sm-3 col-sm-offset-0
-                                          col-md-2 col-md-offset-1" id="side-nav">
-          <div class="list-group   nav nav-stacked" >
-            <a href="#" class="list-group-item active">Metodologia </a>
-            <a href="#como" class="list-group-item">Etica</a>
-            <a href="#experiencia" class="list-group-item">addendum</a>
-            <a href="#valores" class="list-group-item">Valores</a>
-          </div> <!-- list group -->
+      <div class="row ">
+        
         </div>
-
-      <section class="descropcion-wrapper">
+    <div class="container">
+      <div class="row">
+      
+      <section class="descropcion-wrapper col-sm-7">
         <div class="descripcion ">
-          
-            <div class="explicacion col-sm-7 col-sm-offset-3" id="que-hacemos">
+            <div class="explicacion" id="que-hacemos">
             <h2>Que hacemos?</h2>
             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
            
           </div> <!-- explicacion -->
         </div><!-- descripcion -->
         <div class="descripcion ">
-            <div class="explicacion col-sm-7 col-sm-offset-3" id="como">
+            <div class="explicacion" id="como">
             <h2>Como lo hacemos?</h2>
             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
            
@@ -70,7 +65,7 @@
         </div><!-- descripcion -->
         <div class="descripcion ">
           
-            <div class="explicacion col-sm-7 col-sm-offset-3" id="experiencia">
+            <div class="explicacion 7 " id="experiencia">
             <h2>Experiencia</h2>
             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
            
@@ -78,17 +73,65 @@
           </div><!-- descripcion -->
         <div class="descripcion ">
           
-            <div class="explicacion col-sm-7 col-sm-offset-3" id="valores">
+            <div class="explicacion " id="valores">
             <h2>Valores</h2>
             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
            
           </div> <!-- explicacion -->
         </div><!-- descripcion -->
-      </section>
+      </section><!-- descropcion-wrapper col-sm-5 -->
+      
+      <section class="descropcion-wrapper  col-sm-5" data-spy="affix" data-offset-top="60">
+        <div class="panel-group" id="accordion">
+          <h3 class="panel-heading">Addendums</h3>
+          <div class="panel panel-default">
 
-      </div><!-- row content -->
-
-
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  Collapsible Group Item #1
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                  Collapsible Group Item #2
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                  Collapsible Group Item #3
+                </a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section><!-- descropcion-wrapper col-sm-5 -->
+  
+    </div> <!-- container -->
 <!-- 
       <footer class="navbar-bottom" style="position: fixed;">
         <p>© ALSmith y Associados</p>

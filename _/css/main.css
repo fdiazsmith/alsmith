@@ -111,6 +111,13 @@ header{
   color: rgb(180,180,180);
 }
 @media (max-width: 768px){
+.affix{
+  position: relative !important;
+}
+#side-nav{
+  /*position: fixed;*/
+  top: 50px !important;
+}
   .brand img{
  
   }
@@ -173,7 +180,8 @@ main{
 }
 
 @media (min-width: 768px){
-  #side-nav{ position: fixed;   top: 270px !important; }
+
+  #side-nav{  }
   .descropcion-wrapper{margin-top: 300px;}
 }
 .jumbotron{
@@ -199,15 +207,18 @@ min-height: 90px;
 .frase p {
 
 }
+#side-nav.affix{
+  top: 193px;
+}
 #side-nav{
   /*position: fixed;*/
-  top: 50px;
+  top: 250px;
   z-index: 700;
   font-family: 'Josefin Slab', serif;
 }
 .descropcion-wrapper{
   position: relative;
-    margin-top: 230px;
+    margin-top: 275px;
 }
 .descripcion{
   position: relative;

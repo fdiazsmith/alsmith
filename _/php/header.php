@@ -1,4 +1,4 @@
-<header class="navbar navbar-default navbar-fixed-top" role="navigation">
+<header class="navbar navbar-default navbar-fixed-top affix-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -20,7 +20,7 @@
         <li class="nav-button "><a href="servicios.php">Servicios</a></li>
         <li class="nav-button"><a href="metodologia.php">Metodología</a></li>
         <li class="nav-button"><a href="#">Ana Luz</a></li>
-        <li class="nav-button"><a href="#">English</a></li>
+        <li class="nav-button"><a href="english.php">English</a></li>
       </ul>
     </div> <!-- /.navbar-collapse -->
   </div>
