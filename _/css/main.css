@@ -91,6 +91,7 @@ header{
 }
 .brand{
   position: relative;
+
 }
 .Smith{
   position: relative;
@@ -121,6 +122,16 @@ header{
   .brand img{
  
   }
+}
+.contacto-body{
+position: fixed;
+width: 100%;
+background-color: rgb(178, 178, 255);
+height: auto;
+left: 0;
+margin-top: -10px;
+top: 93px;
+
 }
 
 @media (min-width: 768px){
