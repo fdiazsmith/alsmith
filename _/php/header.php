@@ -17,19 +17,39 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right " id="nav-links">
       <ul class="nav navbar-nav navbar-left ">
+        <!-- there is a problem with the number list items it does not reflow correctly. -->
         <li class="nav-button "><a href="servicios.php">Servicios</a></li>
         <li class="nav-button"><a href="metodologia.php">Metodología</a></li>
         <li class="nav-button"><a href="#">Ana Luz</a></li>
         <li class="nav-button"><a href="english.php">English</a></li>
-        <li class=" nav-button" id="accordion">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Contacto</a>
-            <div id="collapseOne" class="collapse contacto-body">
+        <li class=" nav-button" ><a data-toggle="collapse" data-target="#collapseOne">Contacto</a>
+          <div id="collapseOne" class="collapse contacto-body" style="position: fixed!important;">
+            <!-- Add a media query here. in cell phones and tablets it does not need to be fixed -->
             <div class="container">
-                <div class="panel-body contacto-ds">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+               <div class="row">
+                  <div class="content col-sm-3">
+                    <h3 class="contacto-title"><span class="land-title">Telefonos</span></h3>
+                    <div class="land-line"></div>
+                    <p><strong>officina</strong> <a class="tel" href="tel:+52442281414">442.228.1414</a></p>
+                    <p><strong>celular</strong> <a class="tel" href="tel:+5214422194682">442.219.4682</a></p>
+                  </div>
+                  <div class="content col-sm-3">
+                    <h3 class="contacto-title"><span class="land-title">Email</span></h3>
+                    <div class="land-line"></div>
+                    <p><strong>Ana Luz</strong> <a href="mailto:alsmith@alsmith.com.mx" target="_top"> alsmith@alsmith.com.mx</a></p>
+                    <p> <strong>Curriculums</strong> <span>alsmith@alsmith.com.mx</span></p>
+                  </div> <!-- dir -->
+                  <div class="content col-sm-3">
+                    <h3 class="contacto-title"><span class="land-title">Mandonos tu curriculum</span></h3>
+                    <div class="land-line"></div>
+                    <div class="input-group">
+                      
+                      <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                  </div> <!-- electronic -->
                 </div>
-              </div>
-            </div>
+              </div> <!-- container -->
+          </div><!-- collapse -->
 
         </li> <!-- panel group -->
       </ul>
