@@ -22,8 +22,8 @@
         <li class="nav-button"><a href="metodologia.php">Metodología</a></li>
         <li class="nav-button"><a href="#">Ana Luz</a></li>
         <li class="nav-button"><a href="english.php">English</a></li>
-        <li class=" nav-button" ><a data-toggle="collapse" data-target="#collapseOne">Contacto</a>
-          <div id="collapseOne" class="collapse contacto-body" style="position: fixed!important;">
+        <li class=" nav-button" ><a data-toggle="collapse" data-target="#contacto">Contacto</a>
+          <div id="contacto" class="collapse contacto-body" style="position: fixed!important;">
             <!-- Add a media query here. in cell phones and tablets it does not need to be fixed -->
             <div class="container">
                <div class="row">
