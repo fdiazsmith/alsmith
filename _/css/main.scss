@@ -1,12 +1,35 @@
 
+
+/*
+      M I X I N S
+************************/
+@mixin simple-transition($what, $time, $type) {
+    -webkit-transition: $what $time $type;
+       -moz-transition: $what $time $type;
+         -o-transition: $what $time $type;
+            transition: $what $time $type;
+}
+
+
+/*
+      V A R IA B L E S
+************************/
+$als-blue: rgb(255,255,255);
+$als-gray: rgb(255,255,255);
+$als-gray-dark: rgb(255,255,255);
+
+
+
+//the rest
+
 .landing-wrapper{
-  position: relative;
-  widows: 100%;
+  position: absolute;
+  width: 100%;
   height: 900px;
   background-color: rgb(255,255,255);
   z-index: 10000;
-  color:   color: rgb(56, 46, 114);
-
+  color: rgb(56, 46, 114);
+  top: 0;
   
 }
 .landing-wrapper .background{
@@ -33,6 +56,21 @@
   height: 2px;
   background-color: rgb(26,26,26); 
 }
+/* SCROLL INDICATOR
+***********************************************************/
+.scroll-indicator{
+  margin-top: 10%;
+  position: relative;
+
+  -webkit-animation: fade-in-out 1s alternate infinite ease-in-out;
+     -moz-animation: fade-in-out 1s alternate infinite ease-in-out;
+       -o-animation: fade-in-out 1s alternate infinite ease-in-out;
+          animation: fade-in-out 1s alternate infinite ease-in-out;
+}
+@-webkit-keyframes fade-in-out {0%{ opacity: 0; } 100% { opacity: 1; }}
+   @-moz-keyframes fade-in-out {0%{ opacity: 0; } 100% { opacity: 1; }}
+     @-o-keyframes fade-in-out {0%{ opacity: 0; } 100% { opacity: 1; }}
+        @keyframes fade-in-out {0%{ opacity: 0; } 100% { opacity: 1; }}
 /*
   _______  _______ .__   __.  _______ .______          ___       __      
  /  _____||   ____||  \ |  | |   ____||   _  \        /   \     |  |     
@@ -44,7 +82,7 @@
 */
 
 
-.*{
+*{
 	margin: 0;
 	padding: 0;
 }
