@@ -4,7 +4,9 @@
 *
 */
 var $window = $(window)
- , winHeight;
+ , winHeight
+ , $sec = $('.descripcion')
+ , sec = [];
 
 
 
@@ -18,6 +20,7 @@ function initThings(){
 	loadComponents();
 	// adjustParagraphHeight();
 
+	initSections();
 
 	if($('main').hasClass('hide-on-load')){
 	// $('main').css("display", "none");
@@ -26,6 +29,37 @@ function initThings(){
 	$('.landing-wrapper').height(winHeight);
 
 
+}
+
+/**
+ *
+ * SETS SLIDE COMPONENTS
+ * grabs DOM data once on resize rather than every loop
+ * 
+ */
+
+function initSections() {
+
+  console.log("init sections");
+  
+  $sec.each(function(i,e) {
+	//change the size of the section to match the inner content
+	var thisHeight = $(this).children('.explicacion').height();
+	$(this).height(thisHeight+30);
+
+    sec[i] = {}; //clear
+
+
+    sec[i].id          =  $(e).attr( 'id' );
+    sec[i].slideHeight =  $(e).height();
+    sec[i].slideTopPos =  $(e).position().top;
+    sec[i].offsetTop   =  ($(e).data("top-offset") !== undefined )? +$(e).data("top-offset") : 0; 
+    sec[i].slideSpeed  =  ($(e).data("speed") !== undefined )? +$(e).data("speed") : 0 ; //if there is no data-speed atribute then set it to 0
+    sec[i].lockWheel   =  ($(e).data("lock-wheel") !== undefined )? true : false ;
+    sec[i].lockFlag    =   false;
+    sec[i].imagery     =   $(e).children('.imagery');
+    sec[i].delta       =   0;
+  });
 }
 
 function scrollTo(where){
@@ -89,6 +123,55 @@ $.ajax('_/components/jumbotron.html', {
   });
 }
 
+function updateLoop(){
+	
+
+	$sec.each(function(i,e){
+		var windowPos = $window.scrollTop()
+		 ,	windowHeight = $window.height()
+		 ,id              = sec[i].id //sec[i].id, //$(e).attr('id'),
+      , thisSlideHeight = sec[i].slideHeight //$(this).height(),
+      , slideTopPos     = sec[i].slideTopPos //$(this).position().top,
+      , offsetTop       = sec[i].offsetTop;
+
+      // booleans that check whether slide is in viewport and whether the bottom has arrived
+        // also some stuff that doesn't get used
+    var outOfViewTop            = ( windowPos > slideTopPos+thisSlideHeight +300) ? true : false
+     ,  outOfViewBottom         = ( windowPos + windowHeight < slideTopPos ) ? true : false
+     ,   isWithinRange           = ( outOfViewTop === false && outOfViewBottom === false ) ? true : false
+     ,   slideTopHasHitWindowTop = ( windowPos > slideTopPos + offsetTop) ? true : false
+     ,	isPassTheQuote 			= ((slideTopPos+thisSlideHeight + 00) - windowPos < 0) ? true : false ;
+    	var magicnumber = (slideTopPos+thisSlideHeight + 200) - windowPos ;
+
+    	if (isPassTheQuote && isWithinRange) {
+    		// $('#frase-container').children('#'+i).addClass('activeParagraph').prev().removeClass('activeParagraph');
+    		
+    		var index = i+1;
+    		// $('#f'+i).removeClass('active');//.next().addClass('active'); 
+    		// $('#f'+i+1).addClass('active');
+    		$('.quotes').each(function(i,e ){
+    			 if (i === index){
+    				$(this).addClass("active");
+    			}
+    			else {
+    				$(this).removeClass("active");	
+    			}
+    			
+    		});
+
+    		
+    		// console.log(id, i ;
+    		// console.log(id, windowPos, thisSlideHeight, slideTopPos, "magic#= " + magicnumber );
+    		
+    	};
+    	console.log(windowPos, slideTopPos +thisSlideHeight +300);
+    	var moveImgBg = (windowPos*.03);
+    	$('.jumbotron').css('background-position-y', moveImgBg+'%');
+
+	});
+
+
+}
 
 /*
 *	H A N D L E R S
@@ -123,7 +206,7 @@ $(document).ready(function(){
 	console.log("offset header");
 
 	$window.scroll(function(){
-		console.log($window.scrollTop());
+		updateLoop();
 	});
 
 });

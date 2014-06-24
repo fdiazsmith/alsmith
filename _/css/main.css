@@ -216,12 +216,22 @@ $$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
 .frases {
   position: fixed;
   width: 100%;
-  /*z-index: 10;*/ }
-
-.frase p .highlight {
-  background-color: rgba(250, 250, 250, 0.8);
-  min-height: 90px;
-  padding: 3px 0px 3px 10px; }
+  /*z-index: 10;*/
+  height: 200px; }
+  .frases .active {
+    display: block;
+    opacity: 1; }
+  .frases p {
+    display: none;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out; }
+    .frases p .highlight {
+      background-color: rgba(250, 250, 250, 0.8);
+      min-height: 90px;
+      padding: 3px 0px 3px 10px; }
 
 #side-nav.affix {
   top: 193px; }
@@ -262,11 +272,19 @@ $$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
 .explicacion {
   position: relative;
   z-index: 20;
-  height: 200px; }
+  height: auto; }
 
 /*
  S E R V I C I O S
 */
+#servicios h2 {
+  font-size: 46px;
+  margin-left: -100px;
+  padding-bottom: .7em;
+  width: 100%; }
+#servicios h3 {
+  font-size: 36px; }
+
 hr {
   height: 1px;
   background-color: #333;
@@ -301,7 +319,7 @@ M E T O D O LO G I A
   position: fixed; }
 
 #todo {
-  background-color: #333;
+  background-color: transparent;
   position: relative;
   z-index: 10; }
 
