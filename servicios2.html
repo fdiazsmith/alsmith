@@ -38,47 +38,60 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron-container"></div>
 
-
-<main class="hide-on-load" style="overflow-x: hidden;" > 
+<main> 
+ <div class="container-fluid">
+      
+        <div class="col-sm-3 col-md-2 sidebar" style="position: fixed;" id="nav-servicios">
+<div class="panel-group nav nav-sidebar" id="servicios-sidebar">
+  <div class="panel">
+    <!-- <div class="panel-heading">
+      <h4 class="panel-title"> -->
+      <h4>
+        <a data-toggle="collapse" data-parent="#servicios-sidebar" href="#busqueda-collapse">
+          Sobre la búsqueda
+        </a>
+      </h4>
+      <!-- </h4>
+    </div> -->
+    <ul id="busqueda-collapse" class="panel-collapse collapse in ">
+      <li><a href="#busqueda">Búsqueda</a></li>
+      <li><a href="#alineacion">Alineación</a></li>
+      <li><a href="#evaluacion">Evaluación</a></li>
+    </ul>
+  </div>
+  <div class="panel panel-default">
+      <h4>
+        <a data-toggle="collapse" data-parent="#servicios-sidebar" href="#processo-collapse">
+          Sobre el Processo
+        </a>
+      </h4>
     
-    <div class="jumbotron-container"></div>
-  
-    <div class="nav nav-stacked" id="side-nav">
-      <div class="nav nav-stacked">
-          <a  data-toggle="collapse" data-parent="#sideNav" href="#busqueda-collapse">
-            Sobre la búsqueda
-          </a>
-          <ul id="busqueda-collapse" class="panel-collapse collapse in ">
-            <li><a href="#busqueda">Búsqueda</a></li>
-            <li><a href="#alineacion">Alineación</a></li>
-            <li><a href="#evaluacion">Evaluación</a></li>
-          </ul>
-
-          <a class="" data-toggle="collapse" data-parent="#sideNav" href="#processo-collapse">
-            Sobre el Processo
-          </a>
-          <ul id="processo-collapse" class="panel-collapse collapse ">
-            <li><a href="#descripcion">Descripción de puesto</a></li>
-            <li><a href="#ref-empresa">Referente a su empresa</a></li>
-            <li><a href="#responsabilidades">Responsabilidades del puesto</a></li>
-            <li><a href="#caracteristicas">Características del candidato</a></li>
-            <li><a href="#competencias">Competencias del candidato</a></li>
-          </ul>
-
-          <a  class="" data-toggle="collapse" data-parent="#sideNav" href="#desarollo-collapse">
-             Desarrollo del candidato
-          </a>
-          <ul id="desarollo-collapse" class="panel-collapse collapse">
-            <li><a href="#estrategia">Estrategia de la búsqueda</a></li>
-            <li><a href="#cv">Currículum vitae</a></li>
-            <li><a href="#buen-cv">Un Buen currículum vitae</a></li>  
-          </ul>
-      </div>
-    </div>
-
-      <section class="descropcion-wrapper" >
-        <div class="contenido " id="que-hacemos">
-          <div class="texto" id="busqueda">
+    <ul id="processo-collapse" class="panel-collapse collapse">
+      <li><a href="#descripcion">Descripción de puesto</a></li>
+      <li><a href="#ref-empresa">Referente a su empresa</a></li>
+      <li><a href="#responsabilidades">Responsabilidades del puesto</a></li>
+      <li><a href="#caracteristicas">Características del candidato</a></li>
+      <li><a href="#competencias">Competencias del candidato</a></li>
+    </ul>
+  </div>
+  <div class="panel panel-default">
+      <h4>
+        <a data-toggle="collapse" data-parent="#servicios-sidebar" href="#desarollo-collapse">
+           Desarrollo del candidato
+        </a>
+      </h4>
+    <ul id="desarollo-collapse" class="panel-collapse collapse">
+      <li><a href="#estrategia">Estrategia de la búsqueda</a></li>
+      <li><a href="#cv">Currículum vitae</a></li>
+      <li><a href="#buen-cv">Un Buen currículum vitae</a></li>  
+    </ul>
+  </div>
+</div>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" data-spy="scroll" data-target=""id="sevicios-main">
+          <div class="img-bg">
+          </div>
+          <div class="col-xs-9 col-xs-offset-3 main" id="busqueda">
             <h2>Búsqueda</h2>
             <p>
             Cuando necesitamos cubrir una posición, queremos al mejor candidato posible, que sea la persona adecuada en el nivel de ingresos correcto para la posición en cuestión y que se pueda integrar rápidamente al puesto para lograr resultados en la organización lo más pronto posible. Es por  esto que, ALSmith y Asociados ofrece realizar investigación original, siempre, en lugar de búsquedas de bancos de datos como otras empresas. ALSmith y Asociados le ofrece el mejor talento disponible para que elija la mejor opción para crecer su organización.  
@@ -86,23 +99,22 @@
           </div>
           <!-- <hr> -->
           <div class="line-divider" id="alineacion"></div>
-          <div class="texto">
+          <div class="col-xs-9 col-xs-offset-3 main">
             <h2> Reforzamiento de los Sistemas Gerenciales</h2>
             <p>
             La experiencia e intuición acerca de candidatos y clientes nos permite asesorar a las organizaciones en situaciones específicas relativas a los puestos y los ejecutivos. Alineamos expectativas de la organización y de los ejecutivos basadas en la estrategia de la empresa, evaluación de los ejecutivos y un plan de desarrollo gerencial individualizado.
             </p>
           </div>
           <div class="line-divider" id="evaluacion"></div>
-          <div class="texto">
+          <div class="col-xs-9 col-xs-offset-3 main">
             <h2>Evaluación de ejecutivos a través de "Success Insights"</h2>
             <p>
             Con el propósito de complementar nuestros servicios y siempre preocupados por estar a la vanguardia, ALSmith y Asociados ha establecido una relación de negocios con Success Insights International, Inc. líder mundial en investigación e implementación de evaluaciones de ejecutivos confiables y validadas para el desarrollo personal y profesional. 
             Basado en sus investigaciones de mas de 20 años, Success Insights International, Inc. desarrolla herramientas que nos permiten conocer factores de comportamiento, competencias y motivadores que facilitan los procesos de comunicación y desarrollo entre las personas, favoreciendo así a procesos de educación, preparación, desarrollo profesional, relaciones interpersonales, reclutamiento, coaching y capacitación entre otros. Actualmente cuenta con más de 6 millones de reportes aplicados en el mundo (como referencia la Revista Forbes publicó que cada 10 segundos se completa una evaluación Success Insights en el mundo).
             </p>
           </div>
-        </div><!-- contenido -->
-        <div class="contenido " id="como">
-          <div class="texto">
+          <div class="line-divider" id="descripcion"></div>
+          <div class="col-xs-9 col-xs-offset-3 main">
             <h2>¿Cómo hacer una descripción de puesto?</h2>
             <p>
             La descripción de puesto  para nosotros es como los planos de una casa para le arquitecto.
@@ -240,9 +252,9 @@
           </p>
 
           </div> <!-- the las col-xs-9 thingy -->
-        </div><!-- contenido -->
-        <div class="contenido " id="experiencia">
-          <div class="texto">
+
+          <div class="line-divider" id="cv"></div>
+          <div class="col-xs-9 col-xs-offset-3 main">
             <h2>¿Cómo hacer un C.V.?</h2>
             <p>
               En ALSmith y Asociados sabemos que sólo con el mejor talento las organizaciones pueden crecer, por lo que a continuación se mencionan algunos tips para la elaboración del Curriculum Vitae.
@@ -292,17 +304,9 @@
 
 
           </div> <!-- curriculum col -->
-        </div><!-- contenido -->
 
-      </section>
-
-
-
-
-      <footer class="navbar-bottom">
-        <p class="text-center">© ALSmith y Associados</p>
-      </footer>
-    </div> <!-- /container -->
+        </div> <!-- main section -->
+    </div>
 </main>
 
     <!-- Bootstrap core JavaScript
