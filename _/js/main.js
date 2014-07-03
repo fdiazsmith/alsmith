@@ -1,4 +1,84 @@
+var debug = true;
+var landingPage = false;
 
+
+var als = Object.create({
+
+  /*
+  * INITIALIZE EVERYTHING  
+  *
+  */
+  init: function(){
+    // console.log(this);
+    als.getElements();
+    als.loadComponents();
+    als.elements.$window.on("scroll", als.scrollLoop);
+    
+    if (debug) console.log("all done with initialization");
+  },
+  /*
+  *  GET THE JQUERY ELEMS
+  *
+  */
+  getElements: function(){
+    als.elements = {
+      $window: $(window),
+      $contenido:    $(".contenido"),
+      $texto:      $('.texto')
+    }
+    // function crunchTheNumbers(){
+    //  if (debug) console.log("hey you are calling me successfully");
+    // }
+  },
+  /*
+  * LOAD COMPONENTS
+  *
+  */
+  loadComponents: function(e){
+    if (e === undefined){
+      console.log("success", e);
+      $.ajax('_/components/header.html', {
+        success: function(response){
+          $("header").html(response);
+        },
+        error: function(request, errorType, errorMessage){
+        },
+
+        timeOut: 3000
+      });
+      if (landingPage)
+      $.ajax('_/components/landing.html', {
+        success: function(response){
+          $(".landing").html(response);
+          //once the response is in. then  format it.
+          $(".landing-wrapper").css("height" , winHeight+"px");
+          // console.log($(".landing-wrapper"));
+          $(".landing-wrapper .background").animate({"opacity" : "1"}, "slow");
+        },
+        error: function(request, errorType, errorMessage){
+        },
+        timeOut: 3000
+      });
+    $.ajax('_/components/jumbotron.html', {
+        success: function(response){
+          $(".jumbotron-container").html(response);
+        },
+        error: function(request, errorType, errorMessage){
+        },
+        timeOut: 3000
+      });
+    }
+  },
+  /*
+  *  scroll loop
+  *
+  */
+  scrollLoop: function(){
+    console.log("scrollLoop");
+  },
+
+
+});
 /*
 *	V A R I A B L E S 
 *
@@ -90,38 +170,7 @@ function adjustParagraphHeight(){
 
 //loads the components that will be reused through out into the site.
 // e.g. the header. 
-function loadComponents(){
-  $.ajax('_/components/header.html', {
-    success: function(response){
-      $("header").html(response);
-    },
-    error: function(request, errorType, errorMessage){
-    },
 
-    timeOut: 3000
-  });
-
-  //   $.ajax('_/components/landing.html', {
-  //   success: function(response){
-	 //    $(".landing").html(response);
-	 //    //once the response is in. then  format it.
-	 //  	$(".landing-wrapper").css("height" , winHeight+"px");
-	 //  	// console.log($(".landing-wrapper"));
-		// $(".landing-wrapper .background").animate({"opacity" : "1"}, "slow");
-  //   },
-  //   error: function(request, errorType, errorMessage){
-  //   },
-  //   timeOut: 3000
-  // });
-$.ajax('_/components/jumbotron.html', {
-    success: function(response){
-      $(".jumbotron-container").html(response);
-    },
-    error: function(request, errorType, errorMessage){
-    },
-    timeOut: 3000
-  });
-}
 
 function updateLoop(){
 	
@@ -205,9 +254,9 @@ $(document).ready(function(){
 
 	console.log("offset header");
 
-	$window.scroll(function(){
-		updateLoop();
-	});
+	// $window.scroll(function(){
+	// 	updateLoop();
+	// });
 
 });
 

@@ -1,22 +1,6 @@
 
 
-/*
-      M I X I N S
-************************/
-@mixin simple-transition($what, $time, $type) {
-    -webkit-transition: $what $time $type;
-       -moz-transition: $what $time $type;
-         -o-transition: $what $time $type;
-            transition: $what $time $type;
-}
 
-
-/*
-      V A R IA B L E S
-************************/
-$als-blue: rgb(255,255,255);
-$als-gray: rgb(255,255,255);
-$als-gray-dark: rgb(255,255,255);
 
 
 
@@ -198,40 +182,18 @@ border-bottom: 1px solid whitesmoke;
   }
 }
 
-/*Contacto
-                  _             _        
-                 | |           | |       
-   ___ ___  _ __ | |_ __ _  ___| |_ ___  
-  / __/ _ \| '_ \| __/ _` |/ __| __/ _ \ 
- | (_| (_) | | | | || (_| | (__| || (_) |
-  \___\___/|_| |_|\__\__,_|\___|\__\___/ 
-                                         
-                                         
-*/
-
-
-/*esta parte es del cuerpo
-
-$$\      $$\           $$\           
-$$$\    $$$ |          \__|          
-$$$$\  $$$$ | $$$$$$\  $$\ $$$$$$$\  
-$$\$$\$$ $$ | \____$$\ $$ |$$  __$$\ 
-$$ \$$$  $$ | $$$$$$$ |$$ |$$ |  $$ |
-$$ |\$  /$$ |$$  __$$ |$$ |$$ |  $$ |
-$$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
-\__|     \__| \_______|\__|\__|  \__|
-                                     
-                                     
-
-
-*/
-
 //////////////////////////////////////////////////////////////////////////////////////
 /* VARIABLES
 *******************************************/
 $light_gray: rgb(200,200,200);
 $nav_hover: rgb(230,230,230);
 $nav_text_hover: rgb(80,80,80);
+
+$als-blue: rgb(255,255,255);
+$als-gray: rgb(255,255,255);
+$als-gray-dark: rgb(255,255,255);
+
+
 /* MIXINS
 *******************************************/
 @mixin simple_transition($what, $time, $type) {
@@ -287,13 +249,20 @@ only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
 }
 
-
-main{
-
-}
+/*
+$$\      $$\           $$\           
+$$$\    $$$ |          \__|          
+$$$$\  $$$$ | $$$$$$\  $$\ $$$$$$$\  
+$$\$$\$$ $$ | \____$$\ $$ |$$  __$$\ 
+$$ \$$$  $$ | $$$$$$$ |$$ |$$ |  $$ |
+$$ |\$  /$$ |$$  __$$ |$$ |$$ |  $$ |
+$$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
+\__|     \__| \_______|\__|\__|  \__|
+*/
 .nav{
   font-family: 'Josefin Slab', serif;
 }
+
 #side-nav{
   position: fixed;
   top: 240px;
@@ -339,12 +308,49 @@ main{
     max-width: 800px;
   }
 }
-
+  
+  .container-fluid{
+    padding: 0;
+  }
+  h2{
+    font-size: 46px;
+    margin-left: -100px;
+    padding-bottom: .7em;
+    width: 100%;
+  }
+  h3{
+    font-size: 36px;
+  }
+  .img-bg{
+    background: green;
+    width: 100%;
+    height: 100px;
+  }
+// maybe useful
+hr{
+  height: 1px;
+  background-color: #333;
+  border:1px;
+}
+.line-divider{
+  height: 1px;
+  background-color:rgba(36,36,36,.5);
+  border:1px;
+  width: 100%;
+  margin: 80px 0px ; 
+  display: inline-block;
+}
 /*                        Servicios
 *******************************************/
 #servicios{
+  overflow-x:hidden;
   #side-nav{
     width: 250px;
+    .panel{
+      box-shadow: none;
+      padding: 0;
+      margin: 0;
+    }
     ul{
       list-style: none;
       li{
@@ -355,21 +361,41 @@ main{
       }
     }
   }
+
   .contenido{
    .texto{
       left: 35%;
     }
   }
-
+  #descripcion{
+    height: 100px;
+  }
+  #cv{
+    height: 100px;
+  }
 }
 
+/*                        moetodologia
+*******************************************/
+#metodologia{
+  .texto{
+    left: 15%;
+    max-width: 500px;
+  }
+  #adendums{
+    position: fixed;
+    background-color: white;
+    top: 15%;
+    width: auto;
+    max-width: 500px;
+    min-width: 380px;
+    float: right;
+    right: 5%;
+  }
 
+}
 //////////////////////////////////////////////////////////////////////////////////////
-@media (min-width: 768px){
 
-  #side-nav{  }
-  .descropcion-wrapper{margin-top: 300px;}
-}
 .jumbotron{
   padding-top: 95px !important;
   background-image: url("../../imgs/img_central.jpg");
@@ -402,171 +428,5 @@ main{
   }
 
 
-}
-
-#side-nav.affix{
-  top: 193px;
-}
-#side-nav{
-  /*position: fixed;*/
-  top: 250px;
-  z-index: 700;
-  font-family: 'Josefin Slab', serif;
-}
-.descropcion-wrapper{
-  position: relative;
-    margin-top: 275px;
-}
-.descropcion-wrapper:last-child{
-  padding-bottom: 200px;
-}
-.descripcion{
-  position: relative;
-  background-color: white;
-  min-height: 300px;
-    width: 100%;
-     margin-bottom: 200px;
-
-  /*overflow-y: scroll; */
-}
-.bg{
-  position: relative;
-  width: 100%;
-}
-.active{
-  /*background-color: whitesmoke !important;*/
-  border: none;
-}
-.algo{
-  position: relative;
-  top: 280px;
-}
-.explicacion{
- 
-  position: relative;
-  z-index: 20;
-  height: auto;
-
-}
-/*
- S E R V I C I O S
-*/
-
-#servicios{
-  overflow-x:hidden;
-  .container-fluid{
-    padding: 0;
-  }
-  h2{
-    font-size: 46px;
-    margin-left: -100px;
-    padding-bottom: .7em;
-    width: 100%;
-  }
-  h3{
-    font-size: 36px;
-  }
-  .img-bg{
-    background: green;
-    width: 100%;
-    height: 100px;
-  }
-  #descripcion{
-    height: 100px;
-  }
-  #cv{
-    height: 100px;
-  }
-  #sideNav{
-    background: white;
-      padding: 0;
-    h4{
-      padding: 0;
-    }
-    .panel{
-      // background: transparent;
-      // box-shadow: none;
-    }
-    ul{
-      margin-left: 8px;
-      list-style: none;
-    }
-  }
-}
-hr{
-  height: 1px;
-  background-color: #333;
-  border:1px;
-}
-.line-divider{
-  height: 1px;
-  background-color:rgba(36,36,36,.5);
-  border:1px;
-  width: 100%;
-  margin: 80px 0px ; 
-  display: inline-block;
-}
-#nav-servicios{
-background-color: rgb(200,200,200);
-}
-#sevicios-main{
-  position: relative;
-  background-color: white;
-  padding: 0;
-}
-#sevicios-main p{
-margin: auto 5%  auto 7%;
-line-height: 2em;
-  max-width: 700px;
-}
-
-/*
-M E T O D O LO G I A
-*/
-.descropcion-wrapper.affix{
-  top: 0px;
-  float: right;
-  right: 50px;
-  position: fixed;
-}
-#todo{
-  background-color: transparent;
-  position: relative;
-z-index: 10;
-}
-.img-central{
-
-}
-.nav-topics{
- 
-}
-.nav-topics li:hover{
-
-}
-
-.nav-topics li a{
-
-}
-.nav-topics li a:hover{
-	
-}
-
-.contenido-wraper{
-
-}
-
-.contenido{
-
-}
-
-.contenido:last-child{
-	
-}
-
-.frases{
-
-}
-.frases i{
-	
 }
 

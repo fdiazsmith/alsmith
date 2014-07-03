@@ -1,9 +1,3 @@
-/*
-      M I X I N S
-************************/
-/*
-      V A R IA B L E S
-************************/
 .landing-wrapper {
   position: absolute;
   width: 100%;
@@ -177,31 +171,6 @@ header {
 
   .navbar-brand {
     opacity: 0; } }
-/*Contacto
-                  _             _        
-                 | |           | |       
-   ___ ___  _ __ | |_ __ _  ___| |_ ___  
-  / __/ _ \| '_ \| __/ _` |/ __| __/ _ \ 
- | (_| (_) | | | | || (_| | (__| || (_) |
-  \___\___/|_| |_|\__\__,_|\___|\__\___/ 
-                                         
-                                         
-*/
-/*esta parte es del cuerpo
-
-$$\      $$\           $$\           
-$$$\    $$$ |          \__|          
-$$$$\  $$$$ | $$$$$$\  $$\ $$$$$$$\  
-$$\$$\$$ $$ | \____$$\ $$ |$$  __$$\ 
-$$ \$$$  $$ | $$$$$$$ |$$ |$$ |  $$ |
-$$ |\$  /$$ |$$  __$$ |$$ |$$ |  $$ |
-$$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
-\__|     \__| \_______|\__|\__|  \__|
-                                     
-                                     
-
-
-*/
 /* VARIABLES
 *******************************************/
 /* MIXINS
@@ -229,6 +198,16 @@ $$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
 /* iPhone 4 ----------- */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /* Styles */ }
+/*
+$$\      $$\           $$\           
+$$$\    $$$ |          \__|          
+$$$$\  $$$$ | $$$$$$\  $$\ $$$$$$$\  
+$$\$$\$$ $$ | \____$$\ $$ |$$  __$$\ 
+$$ \$$$  $$ | $$$$$$$ |$$ |$$ |  $$ |
+$$ |\$  /$$ |$$  __$$ |$$ |$$ |  $$ |
+$$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
+\__|     \__| \_______|\__|\__|  \__|
+*/
 .nav {
   font-family: 'Josefin Slab', serif; }
 
@@ -268,21 +247,73 @@ $$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
     padding: 30px 10px;
     max-width: 800px; }
 
+.container-fluid {
+  padding: 0; }
+
+h2 {
+  font-size: 46px;
+  margin-left: -100px;
+  padding-bottom: .7em;
+  width: 100%; }
+
+h3 {
+  font-size: 36px; }
+
+.img-bg {
+  background: green;
+  width: 100%;
+  height: 100px; }
+
+hr {
+  height: 1px;
+  background-color: #333;
+  border: 1px; }
+
+.line-divider {
+  height: 1px;
+  background-color: rgba(36, 36, 36, 0.5);
+  border: 1px;
+  width: 100%;
+  margin: 80px 0px;
+  display: inline-block; }
+
 /*                        Servicios
 *******************************************/
-#servicios #side-nav {
-  width: 250px; }
-  #servicios #side-nav ul {
-    list-style: none; }
-    #servicios #side-nav ul li a {
-      margin-left: 10px;
-      border: none; }
-#servicios .contenido .texto {
-  left: 35%; }
+#servicios {
+  overflow-x: hidden; }
+  #servicios #side-nav {
+    width: 250px; }
+    #servicios #side-nav .panel {
+      box-shadow: none;
+      padding: 0;
+      margin: 0; }
+    #servicios #side-nav ul {
+      list-style: none; }
+      #servicios #side-nav ul li a {
+        margin-left: 10px;
+        border: none; }
+  #servicios .contenido .texto {
+    left: 35%; }
+  #servicios #descripcion {
+    height: 100px; }
+  #servicios #cv {
+    height: 100px; }
 
-@media (min-width: 768px) {
-  .descropcion-wrapper {
-    margin-top: 300px; } }
+/*                        moetodologia
+*******************************************/
+#metodologia .texto {
+  left: 15%;
+  max-width: 500px; }
+#metodologia #adendums {
+  position: fixed;
+  background-color: white;
+  top: 15%;
+  width: auto;
+  max-width: 500px;
+  min-width: 380px;
+  float: right;
+  right: 5%; }
+
 .jumbotron {
   padding-top: 95px !important;
   background-image: url("../../imgs/img_central.jpg");
@@ -311,115 +342,3 @@ $$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
       background-color: rgba(250, 250, 250, 0.8);
       min-height: 90px;
       padding: 3px 0px 3px 10px; }
-
-#side-nav.affix {
-  top: 193px; }
-
-#side-nav {
-  /*position: fixed;*/
-  top: 250px;
-  z-index: 700;
-  font-family: 'Josefin Slab', serif; }
-
-.descropcion-wrapper {
-  position: relative;
-  margin-top: 275px; }
-
-.descropcion-wrapper:last-child {
-  padding-bottom: 200px; }
-
-.descripcion {
-  position: relative;
-  background-color: white;
-  min-height: 300px;
-  width: 100%;
-  margin-bottom: 200px;
-  /*overflow-y: scroll; */ }
-
-.bg {
-  position: relative;
-  width: 100%; }
-
-.active {
-  /*background-color: whitesmoke !important;*/
-  border: none; }
-
-.algo {
-  position: relative;
-  top: 280px; }
-
-.explicacion {
-  position: relative;
-  z-index: 20;
-  height: auto; }
-
-/*
- S E R V I C I O S
-*/
-#servicios {
-  overflow-x: hidden; }
-  #servicios .container-fluid {
-    padding: 0; }
-  #servicios h2 {
-    font-size: 46px;
-    margin-left: -100px;
-    padding-bottom: .7em;
-    width: 100%; }
-  #servicios h3 {
-    font-size: 36px; }
-  #servicios .img-bg {
-    background: green;
-    width: 100%;
-    height: 100px; }
-  #servicios #descripcion {
-    height: 100px; }
-  #servicios #cv {
-    height: 100px; }
-  #servicios #sideNav {
-    background: white;
-    padding: 0; }
-    #servicios #sideNav h4 {
-      padding: 0; }
-    #servicios #sideNav ul {
-      margin-left: 8px;
-      list-style: none; }
-
-hr {
-  height: 1px;
-  background-color: #333;
-  border: 1px; }
-
-.line-divider {
-  height: 1px;
-  background-color: rgba(36, 36, 36, 0.5);
-  border: 1px;
-  width: 100%;
-  margin: 80px 0px;
-  display: inline-block; }
-
-#nav-servicios {
-  background-color: #c8c8c8; }
-
-#sevicios-main {
-  position: relative;
-  background-color: white;
-  padding: 0; }
-
-#sevicios-main p {
-  margin: auto 5%  auto 7%;
-  line-height: 2em;
-  max-width: 700px; }
-
-/*
-M E T O D O LO G I A
-*/
-.descropcion-wrapper.affix {
-  top: 0px;
-  float: right;
-  right: 50px;
-  position: fixed; }
-
-#todo {
-  background-color: transparent;
-  position: relative;
-  z-index: 10; }
