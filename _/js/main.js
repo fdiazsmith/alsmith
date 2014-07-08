@@ -1,7 +1,7 @@
 var debug = true;
 var landingPage = false;
 
-
+var sectionName = "";
 var als = Object.create({
 
   /*
@@ -12,7 +12,15 @@ var als = Object.create({
     // console.log(this);
     als.getElements();
     als.loadComponents();
+    als.crunchNumbers();
+    $("#side-nav .collapse").collapse('hide');
+    $('.tooltip_btn').tooltip();
+    //event listeners
     als.elements.$window.on("scroll", als.scrollLoop);
+    als.elements.$window.on("resize", als.crunchNumbers);
+    als.elements.$sideNav.on("click", 'a', als.scrollTo);
+    //global vars
+    als.currentPage = $("body").attr('id');
     
     if (debug) console.log("all done with initialization");
   },
@@ -24,11 +32,19 @@ var als = Object.create({
     als.elements = {
       $window: $(window),
       $contenido:    $(".contenido"),
-      $texto:      $('.texto')
+      $texto:      $('.texto'),
+      $header:    $('header'),
+      $jumbotron: $('.jumbotron-container'),
+      $quotes:  $('.quotes'),
+      $sideNav: $('#side-nav'),
+      $adendums: $('#adendums'),
+      $bgImg :  $('.bg-img'),
+      wrapper: $('.descropcion-wrapper')
     }
     // function crunchTheNumbers(){
     //  if (debug) console.log("hey you are calling me successfully");
     // }
+    
   },
   /*
   * LOAD COMPONENTS
@@ -36,7 +52,6 @@ var als = Object.create({
   */
   loadComponents: function(e){
     if (e === undefined){
-      console.log("success", e);
       $.ajax('_/components/header.html', {
         success: function(response){
           $("header").html(response);
@@ -67,6 +82,7 @@ var als = Object.create({
         },
         timeOut: 3000
       });
+    if(debug) console.log("loaded all the ajax");
     }
   },
   /*
@@ -74,196 +90,143 @@ var als = Object.create({
   *
   */
   scrollLoop: function(){
-    console.log("scrollLoop");
+    var windowPos = als.elements.$window.scrollTop()
+      , topWin = self.windowHeight - self.headerHeight
+      , adendumsTop = (als.elements.$adendums === undefined)? als.elements.$adendums.offset().top : "empty"
+      , scrollRatio = (als.elements.$bgImg.data("ratio") !== undefined)? +als.elements.$bgImg.data("ratio") : 1
+      , index = 0
+      , lastIndex = 0 
+      , contId 
+      , contTopPos
+      , contHeight
+      , contOffset
+      , txtId 
+      , txtTopPos
+      , txtHeight
+      , txtOffset= 0
+      , lastSection ;
+      var adendumFlag = false;
+      console.log("scrollRatio",scrollRatio);
+    
+    als.elements.$contenido.each(function(i,e){
+      contId  = als.contenidos[i].name;
+      contTopPos = $(e).position().top + parseInt($(e).css('margin-top'), 10) ;
+      contHeight = $(e).height() ;
+      contOffset = als.contenidos[i].offsetTop;
+      var jumbotronBottom = 200 + self.headerHeight;
+      var hasHitBottomJumbotron = (jumbotronBottom > contTopPos -windowPos )? true : false
+      ,    hasHitBottomHeader = (self.headerHeight > contTopPos -windowPos )? true : false
+      ,    outOfView = (windowPos > contTopPos+contHeight -self.headerHeight)? true : false
+      ,    adendumsHitTp = (self.headerHeight  > contTopPos + 200 -windowPos )? true : false;
+
+      //sticky adendums. it fixs the positions and frees it when necessary
+      if ( adendumsHitTp && contId === "que-hacemos") {
+        als.elements.$adendums.css({'position': 'fixed', 'top': self.headerHeight+'px'});
+      }else if(   contId === "que-hacemos"){
+        als.elements.$adendums.css({'position': 'absolute', 'top': '200px'});
+      }
+      //organizes the swap of frases and other opening and closing of the acordion. 
+      if(hasHitBottomJumbotron && !outOfView){
+        lastSection = contId;
+        index = i;
+        $(".quotes").removeClass('activeQ');
+        $($(".quotes")[index]).addClass('activeQ');
+
+        if ( als.currentPage === 'servicios' && sectionName !== contId   ) {
+           $("#side-nav .collapse").collapse('hide');
+          if( !$("#"+contId).hasClass('in') ) $("#"+contId).collapse('show'); 
+         }
+        sectionName = contId;  
+        als.elements.$bgImg.css({'background-position': '50%'+ windowPos*scrollRatio+'px' })
+      }
+      lastIndex = index;
+    });
+    ///this calculates the position of the subsections (textos). so that it knows where to scrollTo
+    var names = [];//empty the array
+    var lastName ;
+    for (var i = als.textos.length - 1; i >= 0; i--) {
+      if(als.textos[i].topPos < windowPos){
+        names[i] = als.textos[i].name;
+        lastName = names[names.length-1];
+        als.textos[names.length-1] 
+      }
+    };
+    lastSection = contId;
+
   },
+  /*
+  * calculate and cache all the numbers that will be needed
+  * for the event loop
+  *
+  */
+  crunchNumbers: function(){
+    self.windowHeight = als.elements.$window.height();
+    self.windowWidth = als.elements.$window.width();
+    self.headerHeight = als.elements.$header.height();
+    self.jumbotronHeight = als.elements.$jumbotron.height();
 
+    als.contenidos = [];
+    als.textos = [];
 
-});
-/*
-*	V A R I A B L E S 
-*
-*/
-var $window = $(window)
- , winHeight
- , $sec = $('.descripcion')
- , sec = [];
+    als.elements.$contenido.each(function(i,e){
+      console.log("HOLAAAA "+ i , $(e).attr('id'));
+      als.contenidos[i] = {};//clear the array.
+      als.contenidos[i].name       = $(e).attr('id');
+      als.contenidos[i].topPos     = $(e).offset().top;
+      als.contenidos[i].height     = $(e).height();
+      als.contenidos[i].offsetTop  = ($(e).data("top-offset") !== undefined )? +$(e).data("top-offset") : 0; 
+    });
+    als.elements.$texto.each(function(i,e){
+      console.log("HOLAAAA "+ i , $(e).attr('id'));
+      als.textos[i] = {};//clear the array.
+      als.textos[i].name       = $(e).attr('id');
+      als.textos[i].topPos     = $(e).offset().top;
+      als.textos[i].height     = $(e).height();
+      als.textos[i].offsetTop  = ($(e).data("top-offset") !== undefined )? +$(e).data("top-offset") : 0; 
+    });
 
+    // if(self.windowWidth < 768 ){
+    //   als.elements.$adendums.detach();
+    // }
+    // else{
+    //   $('#que-hacemos').append(als.elements.$adendums.attach()) 
+    // }
+    if (debug) console.log("winHeigh: "+self.windowHeight +"winWidth: "+self.windowWidth,
+                          "\nheaderHeight: "+self.headerHeight,
+                          "\ntextos  ",als.textos );
+  if(debug) console.log("just crunched the numbers");
+  },
+  /*
+  *
+  *
+  *
+  */
+  scrollTo: function(event){
+    event.preventDefault();
+    // event.stopPropagation();
+    console.log("just clicked on  ");
+    var targetElement = $(event.currentTarget)[0];
+    
+    var scrollTarget = $(targetElement).attr("href");//,
+      yPosTarget = $('body').find(scrollTarget).offset().top + parseInt($(scrollTarget).css('margin-top'), 10);
+      if(als.currentPage === "inicio") yPosTarget -= 250;
+      if(als.currentPage === 'servicios') yPosTarget -= self.headerHeight;
+      if(scrollTarget === '#busqueda-collapse' || scrollTarget === '#processo-collapse' || scrollTarget === '#desarollo-collapse'){
+      
+      }
+      else{
+        $('body,html').animate({scrollTop: yPosTarget},1000);  
+      }
+      
+    console.log(targetElement, scrollTarget, yPosTarget, $(scrollTarget).css('margin-top'));
+    
+      
+      // -headerHeight.. sometime is necesary to use this. 
+      
 
-
-/*
-*	F U N C T I O N S 
-*
-*/
-
-function initThings(){
-	//first load the components
-	loadComponents();
-	// adjustParagraphHeight();
-
-	initSections();
-
-	if($('main').hasClass('hide-on-load')){
-	// $('main').css("display", "none");
-	 }
-	$('#nav-servicios').height(winHeight);
-	$('.landing-wrapper').height(winHeight);
-
-
-}
-
-/**
- *
- * SETS SLIDE COMPONENTS
- * grabs DOM data once on resize rather than every loop
- * 
- */
-
-function initSections() {
-
-  console.log("init sections");
-  
-  $sec.each(function(i,e) {
-	//change the size of the section to match the inner content
-	var thisHeight = $(this).children('.explicacion').height();
-	$(this).height(thisHeight+30);
-
-    sec[i] = {}; //clear
-
-
-    sec[i].id          =  $(e).attr( 'id' );
-    sec[i].slideHeight =  $(e).height();
-    sec[i].slideTopPos =  $(e).position().top;
-    sec[i].offsetTop   =  ($(e).data("top-offset") !== undefined )? +$(e).data("top-offset") : 0; 
-    sec[i].slideSpeed  =  ($(e).data("speed") !== undefined )? +$(e).data("speed") : 0 ; //if there is no data-speed atribute then set it to 0
-    sec[i].lockWheel   =  ($(e).data("lock-wheel") !== undefined )? true : false ;
-    sec[i].lockFlag    =   false;
-    sec[i].imagery     =   $(e).children('.imagery');
-    sec[i].delta       =   0;
-  });
-}
-
-function scrollTo(where){
-	//fyi: 'where' needs to be a jquery object
-	event.preventDefault();
-	var yPosTarget = $('body').find(where.attr("href")).position().top,
-		headerHeight = $('header').height();
-
-	console.log(yPosTarget);
-	var goToTarget = function(){
-		$('body,html').animate({scrollTop: yPosTarget},1000);
-		// - (substract) headerHeight.. sometime is necesary to use this. 
-	}();
-}
-
-//does not work it is being dealt 
-function adjustParagraphHeight(){
-	$('.descripcion').each(function(){
-		var thisH = $(this).contents();
-		for (var i = thisH.length - 1; i >= 0; i--) {
-			var h = thisH[i].height
-			,	totalH = totalH + h;
-		};
-		console.log(thisH, totalH);
-	});
-	console.log($('.descripcion').height());
-}
-
-//loads the components that will be reused through out into the site.
-// e.g. the header. 
-
-
-function updateLoop(){
-	
-
-	$sec.each(function(i,e){
-		var windowPos = $window.scrollTop()
-		 ,	windowHeight = $window.height()
-		 ,id              = sec[i].id //sec[i].id, //$(e).attr('id'),
-      , thisSlideHeight = sec[i].slideHeight //$(this).height(),
-      , slideTopPos     = sec[i].slideTopPos //$(this).position().top,
-      , offsetTop       = sec[i].offsetTop;
-
-      // booleans that check whether slide is in viewport and whether the bottom has arrived
-        // also some stuff that doesn't get used
-    var outOfViewTop            = ( windowPos > slideTopPos+thisSlideHeight +300) ? true : false
-     ,  outOfViewBottom         = ( windowPos + windowHeight < slideTopPos ) ? true : false
-     ,   isWithinRange           = ( outOfViewTop === false && outOfViewBottom === false ) ? true : false
-     ,   slideTopHasHitWindowTop = ( windowPos > slideTopPos + offsetTop) ? true : false
-     ,	isPassTheQuote 			= ((slideTopPos+thisSlideHeight + 00) - windowPos < 0) ? true : false ;
-    	var magicnumber = (slideTopPos+thisSlideHeight + 200) - windowPos ;
-
-    	if (isPassTheQuote && isWithinRange) {
-    		// $('#frase-container').children('#'+i).addClass('activeParagraph').prev().removeClass('activeParagraph');
-    		
-    		var index = i+1;
-    		// $('#f'+i).removeClass('active');//.next().addClass('active'); 
-    		// $('#f'+i+1).addClass('active');
-    		$('.quotes').each(function(i,e ){
-    			 if (i === index){
-    				$(this).addClass("active");
-    			}
-    			else {
-    				$(this).removeClass("active");	
-    			}
-    			
-    		});
-
-    		
-    		// console.log(id, i ;
-    		// console.log(id, windowPos, thisSlideHeight, slideTopPos, "magic#= " + magicnumber );
-    		
-    	};
-    	console.log(windowPos, slideTopPos +thisSlideHeight +300);
-    	var moveImgBg = (windowPos*.03);
-    	$('.jumbotron').css('background-position-y', moveImgBg+'%');
-
-	});
-
-
-}
-
-/*
-*	H A N D L E R S
-*
-*/
-
-$(document).ready(function(){
-	winHeight = $window.height();
-	initThings();
-	console.log("this is before");
-
-
-	
-	//for now when click anywhere in the page. it just fades out.
-
-	$(".landing").on("click", function(){
-		console.log("landinf click");
-		$(".landing-wrapper").fadeOut();
-		$('main').css('display','block');
-	});
-
-	/////go to places.
-	$('.list-group').on('click', 'a', function(event){
-		scrollTo($(this));
-	});
-
-	$('#nav-servicios').on('click', 'a', function(){
-			scrollTo($(this));
-	});
-
-
-	console.log("offset header");
-
-	// $window.scroll(function(){
-	// 	updateLoop();
-	// });
+  }
 
 });
-
-
-
-
-
 
 
 

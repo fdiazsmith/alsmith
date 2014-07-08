@@ -13,13 +13,12 @@
     <!-- <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> -->
 
     <title>ALSmith y Asociados</title>
-    <!-- F O N T S -->
     <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,700|Alegreya+Sans:100,400,700,900,100italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"> -->
     <link rel="stylesheet" href="_/css/bootstrap-min.css">
-      <!-- Custom styles for this template -->
+    <!-- Custom styles for this template -->
         <link rel="stylesheet" href="_/css/main.css">
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -29,28 +28,96 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body id="servicios" >
+  <body style="overflow-x: hidden;" data-spy="scroll" data-target=".nav-stacked" id="inicio">
+    
+    <div class="landing"></div>    
     <!-- HEADER -->
     <header></header>
+
+<main class="hide-on-load" style="overflow-x: hidden;" > 
     
-    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron-container"></div>
 
-<main> 
- <div class="container-fluid">
- 
-  </div>
+    <section class="descropcion-wrapper" >
+        <div class="bg-img"></div>
+        <div class="row" id="info-contacto">
+            <div class="content col-sm-4">
+                <h3 class="contacto-title"><span class="land-title">Telefonos</span></h3>
+                <div class="land-line"></div>
+                <p><strong>Oficina</strong>
+                    <a class="tel" href="tel:+52442281414">442.228.1414</a>
+                </p>
+                <p><strong>Celular</strong>
+                    <a class="tel" href="tel:+5214422194682">442.219.4682</a>
+                </p>
+            </div>
+            <div class="content col-sm-4">
+                <h3 class="contacto-title"><span class="land-title">Email</span></h3>
+                <div class="land-line"></div>
+                <p><strong>Ana Luz</strong>
+                    <a href="mailto:alsmith@alsmith.com.mx" target="_top"> alsmith@alsmith.com.mx</a>
+                </p>
+                <p> <strong>Curriculums</strong>
+                    <a href="mailto:curriculums@alsmith.com.mx" target="_top"> curriculums@alsmith.com.mx</a>
+                </p>
+            </div> <!-- dir -->
+            <!-- <div class="content col-sm-4">
+                <h3 class="contacto-title"><span class="land-title">Direccion</span></h3>
+                <div class="land-line"></div>
+                <p><span>officina</span> <span>Colinas del Bosque 2 Secc,<br>Corregidora, Qro</span></p>
+            </div>  -->
+        </div>
+        <div class="row " id="politica-privacidad" >
+            <h3>Política de Privacidad</h3>
+            a.– En cumplimiento con lo establecido por la Ley Federal de Protección de Datos 
+            Personales en Posesión de Particulares, el interesado consiente expresamente que sus 
+            datos personales sean registrados en una base de datos automatizada titularidad de
+            ALSmith y Asociados S. de R.L. de C.V. (en lo sucesivo “ALSmith y Asociados”). La finalidad 
+            y el tratamiento que reciban los datos personales del interesado serán para la gestión de
+            las posibles relaciones laborales que puedan surgir entre el interesado y los clientes de
+            ALSmith y Asociados, en el marco de un encargo de búsqueda confidencial. El acceso a su 
+            información se circunscribe únicamente al personal debidamente autorizado por ALSmith y 
+            Asociados. Igualmente, el interesado consiente expresamente que los datos aquí facilitados 
+            puedan ser cedidos exclusivamente a esos clientes con la mayor confidencialidad y en el 
+            marco exclusivo de una búsqueda para la cual ALSmith y Asociados ha sido contratado, 
+            sólo cuando exista cierta coincidencia entre las características e intereses profesionales del 
+            interesado y las habilidades buscadas por el eventual empleador.<br>
+            b.– La temporalidad del manejo de los datos personales será indefinida a partir de la fecha 
+            en que usted los proporcionó a ALSmith y Asociados.<br>
+            c.– El interesado podrá ejercitar los derechos de acceso, rectificación, cancelación y 
+            oposición en los términos establecidos en la legislación vigente dirigiéndose a la siguiente 
+            dirección en internet http://alsmith.com.mx/modificaciondedatos.html y siguiendo las 
+            instrucciones que se le proporcionen.<br>
+            d.– ALSmith y Asociados nunca le solicitará por correo electrónico ni por otros medios, 
+            información referente a contraseñas personales o números de tarjeta de crédito.<br>
+            e.– ALSmith y Asociados podrá modificar el presente aviso de privacidad en cualquier 
+            tiempo y lo mantendrá siempre a disposición por este conducto para su consulta.<br>
+            f.– Para dudas o preguntas con respecto al manejo de la información que ha proporcionado, 
+            puede escribir a la siguiente dirección de correo electrónico: alsmith@alsmith.com.mx.
+        </div>
+
+    </section>
+
+
+
+
+
+      <footer class="navbar-bottom">
+        <p class="text-center">© ALSmith y Asociados</p>
+      </footer>
+    </div> <!-- /container -->
 </main>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--  -->
+    <script src="_/js/jquery.min.js"></script>
+    <script src="https://raw.githubusercontent.com/flesler/jquery.scrollTo/master/jquery.scrollTo.min.js"></script>
+    <script src="_/js/bootstrap.min.js"></script>
     <script src="_/js/main.js"></script>
-  
-  
+    <script> als.init();</script>
+
 
 </body></html>
