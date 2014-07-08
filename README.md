@@ -1,3 +1,3 @@
 alsmith
 =======
-La pagina web Profecional de Ana Luz Smith Ogarrio.
+La pagina web Profesional de Ana Luz Smith Ogarrio.
