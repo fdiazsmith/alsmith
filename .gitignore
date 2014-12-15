@@ -96,4 +96,5 @@ wp-config.php
 # WordPress
 ########################
 **/wordpress/wp-content/uploads/
+**/wordpress/wp-content/plugins/
 src/wordpress/wp-admin/css/colors/sunrise/colors.css
