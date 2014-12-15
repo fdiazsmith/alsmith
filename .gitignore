@@ -34,7 +34,7 @@
 *.tar
 *.zip
 
-#VIDEO FILES
+# VIDEO FILES
 ########################
 *.mp4
 *.webm
