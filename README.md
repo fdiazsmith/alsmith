@@ -1,6 +1,6 @@
-# ALsmith y asociados consultored
+# ALsmith y asociados consultores
 
-## Development Guide
+### Development Guide
 
 ## Getting Started
 
