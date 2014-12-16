@@ -7,7 +7,7 @@
 	<?php if (is_search()) { ?>
 	   <meta name="robots" content="noindex, nofollow" /> 
 	<?php } ?>
-
+	 
 	<title>
 		   <?php
 		      if (function_exists('is_tag') && is_tag()) {
@@ -56,7 +56,7 @@
         <span class="icon-bar"></span>
       </button>
       <a href="index.php">
-        <div class="brand " >   
+        <div class="brand " style="background-image: url('<?php echo get_template_directory_uri();?>/images/logo.jpg');" >   
 	        <?php// echo get_option('home'); ?> <?php //bloginfo('name'); ?>
           <div class="navbar-brand als" href="#"><span class="Al">AL</span><span class="Smith">Smith</span> <span class="associados">y Associados</span></div>
         </div>
