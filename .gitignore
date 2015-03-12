@@ -3,6 +3,9 @@
 #UPDATED:     2014.10.27
 ########################
  
+/src/wp-content/themes/twentyfifteen/**
+/src/wp-content/themes/twentyfourteen/**
+
 # GRUNT DEVELOPMENT
 ########################
  
