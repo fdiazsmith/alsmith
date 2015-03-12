@@ -40,6 +40,7 @@ font-family: 'Alegreya Sans', sans-serif;
 */
 body {
   font-family: 'Alegreya Sans', sans-serif !important;
+  font-size: 18px;
 }
 #main {
   width: 70%;
@@ -65,6 +66,7 @@ header {
   font-family: 'Josefin Slab', serif;
   font-size: 18px;
   background-color: white !important;
+  color: #382e72;
 }
 .als {
   font-family: 'Alegreya Sans', sans-serif !important;

@@ -1,4 +1,10 @@
 @import './mixins.less';
+@import './vars-and-metrics.less';
+
+#main{
+  margin: 0;//consider taking this out from the main css. 
+  width: 100%;
+}
 
 header{
   opacity: 0;
@@ -51,3 +57,42 @@ header{
     .animation(blink 500ms);
   }
 }
+
+#accordion{
+  background-color: red;
+  width: 100%;
+  .panel{
+    .panel-heading{
+      border: none;
+    }
+    .panel-title{
+      font-size: @h2;
+      text-align: center;
+      color: @blue;
+      a{
+        &:hover{
+          color: green;
+        }
+      text-align: center;
+      margin: 0 auto;
+      width: 30%;
+      display: relative;
+      }
+    }
+    .panel-body{
+      padding: 3em 2em;
+      border: none;
+      margin: 0 auto;
+      width: 70%;
+      max-width: 800px;
+      color: @blue;
+    }
+    .panel-collapse{
+      background-color: @gray;
+    }
+  }
+
+}
+
+
+

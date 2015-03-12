@@ -1,4 +1,5 @@
 @import './mixins.less';
+@import './vars-and-metrics.less';
 
 
 .logo{
@@ -41,7 +42,7 @@ font-family: 'Alegreya Sans', sans-serif;
 */
 body{
 font-family: 'Alegreya Sans', sans-serif !important;
-
+font-size: @baseline-text-size;
 }
 #main{
   width: 70%;
@@ -66,8 +67,9 @@ a:hover{
 */
 header{
   font-family: 'Josefin Slab', serif;
-  font-size: 18px;
+  font-size:  @baseline-text-size;
   background-color: white !important;
+  color: @blue;
 }
 .als{
   font-family: 'Alegreya Sans', sans-serif !important;
