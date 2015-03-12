@@ -178,8 +178,8 @@ function alsmith_frontend_scripts() {
   if(is_page( 'home' )) {
 
     array_push($scripts_array, $work_page = array (
-      'handle'    => 'work-page',
-      'src'       => get_template_directory_uri() . '/js/index.js',
+      'handle'    => 'home-page',
+      'src'       => get_template_directory_uri() . '/js/home.js',
       'deps'      => array('jquery'),
       'in_footer' => true,
       'ver'       => '1.0'

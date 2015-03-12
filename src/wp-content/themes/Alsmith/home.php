@@ -59,25 +59,26 @@ $contacto = new WP_Query("category_name=contacto");
 	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
 		<?php
-			wp_reset_query(); 
+			wp_reset_query();
 			$query = new WP_Query("category_name=Home");
+			$panelNumeber = 0;
 			 if( $query->have_posts() ) :
 				 while ($query->have_posts()) : $query->the_post(); 
 					 echo get_the_post_thumbnail( $query->ID, 'thumbnail' ); ?> 
 				<!-- look for has post format  -->
 				<!-- <h6> <?php the_title() ?> </h6> -->
-
+<?php $panelNumeber = $panelNumeber + 1; ?>
 
 
 	  <div class="panel panel-default">
 	    <div class="panel-heading" role="tab" id="headingOne">
-	      <h4 class="panel-title">
-	        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	      <h2 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-<?php echo $panelNumeber ?>" aria-expanded="true" aria-controls="collapse-<?php echo $panelNumeber ?>">
 	          <?php the_title() ?>
 	        </a>
-	      </h4>
+	      </h2>
 	    </div>
-	    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+	    <div id="collapse-<?php echo $panelNumeber ?>" class="panel-collapse collapse <?php if ($panelNumeber ==1) echo 'in'?>" role="tabpanel" aria-labelledby="headingOne">
 	      <div class="panel-body">
 	        <?php the_content() ?>
 	      </div>
