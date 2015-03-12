@@ -29,13 +29,11 @@
 		   ?>
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<link rel="shortcut icon" href="/favicon.ico">
 	
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,400,300italic|Open+Sans:400,700|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main.css">
-	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 	<?php if ( is_singular() ) wp_enqueue_script('comment-reply'); ?>
@@ -43,9 +41,9 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> >
 	
-<div id="page-wrap">
+
 	<header class="navbar navbar-default navbar-fixed-top affix-top" role="navigation">
 		<div class="container">
     <div class="navbar-header">

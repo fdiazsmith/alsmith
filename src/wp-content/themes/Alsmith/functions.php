@@ -15,6 +15,7 @@ $template_directory = get_template_directory();
 
 require( $template_directory . '/includes/basic-setup.php' );
 
+
 // require( $template_directory . '/includes/custom-page.php' );
 
 ?>
