@@ -1,8 +1,7 @@
 {
-  "name": "TELLART.COM",
+  "name": "alsmith.com.mx",
   "version": "0.2.0",
-  "description": "Tellart.com 2014",
-  "main": "index.js",
+  "description": "alsmith 2015",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,11 +9,8 @@
     "type": "git",
     "url": ""
   },
-  "author": "Tellart LLC, Mikhail Mansion, Fernando Diaz",
+  "author": "Alsmith y asociados, Fernando Diaz",
   "license": "Copyright (c) 2014",
-  "bugs": {
-    "url": ""
-  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "~0.4.1",
@@ -24,7 +20,7 @@
     "grunt-contrib-less": "~0.11.4",
     "grunt-contrib-requirejs": "~0.4.1",
     "grunt-contrib-uglify": "~0.2.2",
-    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-watch": "~0.6.1",
     "grunt-exec": "^0.4.6",
     "grunt-processhtml": "~0.3.0",
     "grunt-remove": "^0.1.0"

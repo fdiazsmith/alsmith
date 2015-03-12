@@ -31,7 +31,7 @@ module.exports = function(grunt) {
 
         files: [{
           expand: true, 
-          cwd: 'src/wordpress/',
+          cwd: 'src/wp-content/themes/Alsmith',
           src: [ '**/*', '!wp-config.php'],
           dest: 'dist/'
           }
@@ -61,33 +61,37 @@ module.exports = function(grunt) {
       },
 
       bower_install: {
-        cwd: 'src/wordpress/wp-content/themes/tellart_2014/',
+        cwd: '',
         command: 'bower install',
         stdout: true,
         stderr: true
       }
     },
 
-    less: {
-      development: {
+   compass: {                  // Task
+      dist: {                   // Target
+        options: {              // Target options
+          sassDir: 'sass',
+          cssDir: 'css',
+          environment: 'production'
+        }
+      },
+      dev: {                    // Another target
         options: {
-          banner: "GENERATED CSS do not modify\n"
-        },
-        files: {
-          "src/wordpress/wp-content/themes/tellart_2014/core/css/main.css": "src/wordpress/wp-content/themes/tellart_2014/core/less/main.less"
+          sassDir: 'sass',
+          cssDir: 'css'
         }
       }
     },
-    watch: {
-      options: {
-        livereload: true,
-        spawn: false
-      },
-      core: {
-        files: ['src/wordpress/wp-content/themes/tellart_2014/core/less/*.less', 'src/wordpress/wp-content/themes/tellart_2014/core/scripts/*.js'],
-        tasks: ['less' ]
+     watch: {
+        options: {
+          livereload: true,
+        },
+        css: {
+          files: ['src/*.php'],
+          tasks: ['compass'],
+        },
       }
-    },
 
   });
 
@@ -110,8 +114,8 @@ module.exports = function(grunt) {
    */
 
   grunt.registerTask('install',   [ 'exec:npm_install', 'exec:bower_install' ]);
-  grunt.registerTask('dev-start', [ 'build', 'exec:start_vagrant'  ]);
-  grunt.registerTask('dev-stop',  [ 'build', 'exec:stop_vagrant'     ]);
+  // grunt.registerTask('dev-start', [ 'build', 'exec:start_vagrant'  ]);
+  // grunt.registerTask('dev-stop',  [ 'build', 'exec:stop_vagrant'     ]);
   grunt.registerTask('build',     [ 'exec:npm_install', 'exec:bower_install', 'clean', 'copy:wp_site' ]);
   grunt.registerTask('watch',     [ 'watch']);
 
