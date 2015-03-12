@@ -56,54 +56,38 @@ $contacto = new WP_Query("category_name=contacto");
 </section>
 
 <div id="main">
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Collapsible Group Item #1
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-</div>
-	<?php
-		wp_reset_query(); 
-		$query = new WP_Query("category_name=Home");
-	
-	 if( $query->have_posts() ) :
-		 while ($query->have_posts()) : $query->the_post(); 
-			 echo get_the_post_thumbnail( $query->ID, 'thumbnail' ); ?> 
-			<!-- look for has post format  -->
-			<!-- <h6> <?php the_title() ?> </h6> -->
+	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-			<h2> <?php the_title() ?> </h2>
-			<?php the_content() ?>
-		<?php endwhile; ?>
-	<?php endif; ?>
-
-
-	
-
-	<!-- from the actual page  -->
-	<?php wp_reset_query(); 
-		$query = new WP_Query("pagename=Home");
-	?>
-	<?php if( $query->have_posts() ) :?>
-		<?php while ($query->have_posts()) : $query->the_post(); ?>
-			<?php echo get_the_post_thumbnail( $query->ID, 'thumbnail' ); ?> 
-			<!-- look for has post format  -->
+		<?php
+			wp_reset_query(); 
+			$query = new WP_Query("category_name=Home");
+			 if( $query->have_posts() ) :
+				 while ($query->have_posts()) : $query->the_post(); 
+					 echo get_the_post_thumbnail( $query->ID, 'thumbnail' ); ?> 
+				<!-- look for has post format  -->
 				<!-- <h6> <?php the_title() ?> </h6> -->
-		  
-		  <h2> <?php the_title() ?> </h2>
-		  <?php the_content() ?>
-		<?php endwhile; ?>
-	<?php endif; ?>
+
+
+
+	  <div class="panel panel-default">
+	    <div class="panel-heading" role="tab" id="headingOne">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          <?php the_title() ?>
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+	      <div class="panel-body">
+	        <?php the_content() ?>
+	      </div>
+	    </div>
+
+				
+			<?php endwhile; ?>
+		<?php endif; ?>
+	  </div>
+	</div>
 
 </div>
 
