@@ -3,6 +3,86 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #main {
   margin: 0;
   width: 100%;
@@ -32,21 +112,39 @@ header .container {
   -o-transition: opacity 550ms ease-in;
 }
 #landing-wrapper {
+  position: relative;
   height: 800px;
   width: 100%;
   display: block;
-  background-color: white;
-  color: #382e72;
+  -webkit-animation: fade-in 1522ms 0 ease-in 1 normal;
+  -moz-animation: fade-in 1522ms 0 ease-in 1 normal;
+  -ms-animation: fade-in 1522ms 0 ease-in 1 normal;
+  animation: fade-in 1522ms 0 ease-in 1 normal;
+}
+#landing-wrapper .top {
+  position: relative;
+}
+#landing-wrapper .row {
+  margin: 0;
 }
 #landing-wrapper .background {
-  margin: 4em 3em;
   position: relative;
+  height: 100%;
 }
 #landing-wrapper .info {
   position: absolute;
+  bottom: 0;
   display: block;
-  margin-top: 35%;
   width: 100%;
+  padding: 1em 3em;
+  background-color: #153978;
+  color: white;
+}
+#landing-wrapper .info a {
+  color: white;
+}
+#landing-wrapper .info .land-line {
+  background-color: white;
 }
 #landing-wrapper .chevron-down {
   margin: 0 auto;
@@ -57,13 +155,15 @@ header .container {
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
-  -webkit-animation: blink 500ms 300ms 0 ease;
-  -moz-animation: blink 500ms 300ms 0 ease;
-  -ms-animation: blink 500ms 300ms 0 ease;
+  -webkit-animation: blink 1800ms 0 ease infinite alternate;
+  -moz-animation: blink 1800ms 0 ease infinite alternate;
+  -ms-animation: blink 1800ms 0 ease infinite alternate;
+  animation: blink 1800ms 0 ease infinite alternate;
 }
 #landing-wrapper .chevron-down img {
+  cursor: pointer;
   margin: 0 auto;
-  width: 4em;
+  width: 3em;
 }
 #accordion {
   background-color: red;
@@ -75,7 +175,7 @@ header .container {
 #accordion .panel .panel-title {
   font-size: 1.8em;
   text-align: center;
-  color: #382e72;
+  color: #153978;
 }
 #accordion .panel .panel-title a {
   text-align: center;
@@ -92,8 +192,8 @@ header .container {
   margin: 0 auto;
   width: 70%;
   max-width: 800px;
-  color: #382e72;
+  color: #153978;
 }
 #accordion .panel .panel-collapse {
-  background-color: #f7f7f7;
+  background-color: #ececec;
 }

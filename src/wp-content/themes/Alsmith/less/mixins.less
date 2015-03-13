@@ -85,11 +85,25 @@
   background-image: -o-linear-gradient(left, @startColor, @endColor);
 }
 
-.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease-in) {
   -webkit-animation: @name @duration @delay @ease;
   -moz-animation:    @name @duration @delay @ease;
   -ms-animation:     @name @duration @delay @ease;
+  animation:         @name @duration @delay @ease;
 }
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease, @count,  @direction) {
+  -webkit-animation: @name @duration @delay @ease @count @direction;
+  -moz-animation:    @name @duration @delay @ease @count @direction;
+  -ms-animation:     @name @duration @delay @ease @count @direction;
+  animation:         @name @duration @delay @ease @count @direction;
+}
+// .keyframes-mixin (@name, @frames) {
+//   @-webkit-keyframes @name {@frames}
+//   @-moz-keyframes @name {@frames}
+//   @-ms-keyframes @name {@frames}
+//   @-o-keyframes @name {@frames}
+//   @keyframes @name {@frames}
+// }
 
 .transition (@transition) {
   transition:      @transition;

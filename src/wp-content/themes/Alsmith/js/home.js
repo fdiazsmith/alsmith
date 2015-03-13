@@ -8,6 +8,7 @@ $(document).ready(function(){
 		;
 
 	_.elem.$landing = $("#landing-wrapper");
+	_.elem.$chevron = $("#chevron-down");
 	// $('.collapse').collapse({
 	//   toggle: false
 	// })
@@ -65,7 +66,7 @@ $(document).ready(function(){
     scrollEnd = true;
 	}, 200);
 	
-	_.elem.$landing.on("click", function(){
+	_.elem.$chevron.on("click", function(){
 			console.log("make function to scrollTo");
 		ALS.scrollTo(ALS.elem.$main);
 	});
@@ -75,7 +76,7 @@ $(document).ready(function(){
 		console.log("resizing content from home js ");
 
 		ALS.elem.$main.css({"margin-top" : ""+ALS.elem.$header.height()+"px" });
-		ALS.elem.$landing.css({"min-height" : ""+ALS.windowHeight+"px", "width" :""+ALS.windowWidth+"px"});
+		ALS.elem.$landing.css({"height" : ""+ALS.windowHeight+"px"});
 		ALS.elem.$main.css({"min-height" : ""+ALS.windowHeight+"px", "width" :""+ALS.windowWidth+"px", "color": "red"});
 		console.log(ALS.elem.$main, ALS.windowHeight);
 	}

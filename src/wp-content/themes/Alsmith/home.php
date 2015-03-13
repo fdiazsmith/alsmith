@@ -19,37 +19,35 @@ $contacto = new WP_Query("category_name=contacto");
   <?php while ($contacto->have_posts()) : $contacto->the_post(); ?>
   
   	
-  
-	  <div class="col-sm-4">
+  <div class="top row ">
+	  <div class="col-sm-4  " >
 			<img class="img-responsive" src="<?php echo get_header_image() ?>">
 	  </div>
+  </div>
 <!-- 	  <div class="col-sm-8">
 					<?php the_content() ?>
 	  </div> -->
 
   
 	    
-
-		<div class=" info" >
-			<div class="content col-sm-6 col-md-4 ">
-				<h3 class="contacto-title"><span class="land-title">Telefonos</span></h3>
-				<div class="land-line"></div>
-				<p><strong>officina</strong> <a class="tel" href="tel:+<?php echo $meta_values = get_post_meta( $post->ID, "Telefono", true); ?>"><?php echo $meta_values = get_post_meta( $post->ID, "Telefono", true); ?></a></p>
-				<p><strong>celular</strong> <a class="tel" href="tel:+<?php echo $meta_values = get_post_meta( $post->ID, "Celular", true); ?>"><?php echo $meta_values = get_post_meta( $post->ID, "Celular", true); ?></a></p>
+		<div class="row">
+			<div class=" info" >
+				<div class="content col-sm-6 col-md-4 ">
+					<h3 class="contacto-title"><span class="land-title">Telefonos</span></h3>
+					<div class="land-line"></div>
+					<p><strong>officina</strong> <a class="tel" href="tel:+<?php echo $meta_values = get_post_meta( $post->ID, "Telefono", true); ?>"><?php echo $meta_values = get_post_meta( $post->ID, "Telefono", true); ?></a></p>
+					<p><strong>celular</strong> <a class="tel" href="tel:+<?php echo $meta_values = get_post_meta( $post->ID, "Celular", true); ?>"><?php echo $meta_values = get_post_meta( $post->ID, "Celular", true); ?></a></p>
+				</div>
+				<div class="content col-sm-6 col-md-4" >
+					<h3 class="contacto-title"><span class="land-title">Email</span></h3>
+					<div class="land-line"></div>
+					<p><strong>Ana Luz</strong> <a href="mailto:<?php echo $meta_values = get_post_meta( $post->ID, "Email", true); ?>" target="_top"> <?php echo $meta_values = get_post_meta( $post->ID, "Email", true); ?></a></p>
+					<p>	<strong>Curriculums</strong> <span>alsmith@alsmith.com.mx</span></p>
+				</div> <!-- dir -->
+			<div class="chevron-down"><img id="chevron-down" src="<?php echo get_template_directory_uri()?>/images/chevron-down.svg" alt=""></div>
 			</div>
-			<div class="content col-sm-6 col-md-4 ">
-				<h3 class="contacto-title"><span class="land-title">Email</span></h3>
-				<div class="land-line"></div>
-				<p><strong>Ana Luz</strong> <a href="mailto:<?php echo $meta_values = get_post_meta( $post->ID, "Email", true); ?>" target="_top"> <?php echo $meta_values = get_post_meta( $post->ID, "Email", true); ?></a></p>
-				<p>	<strong>Curriculums</strong> <span>alsmith@alsmith.com.mx</span></p>
-			</div> <!-- dir -->
-		<div class="chevron-down"><img class="chevron-ddown" src="<?php echo get_template_directory_uri()?>/images/chevron-down.svg" alt=""></div>
 		</div>
-		
 
-		  
-	    
-	
 	  <?php endwhile; ?>
 	<?php endif; ?>
 	</div>
@@ -67,9 +65,7 @@ $contacto = new WP_Query("category_name=contacto");
 					 echo get_the_post_thumbnail( $query->ID, 'thumbnail' ); ?> 
 				<!-- look for has post format  -->
 				<!-- <h6> <?php the_title() ?> </h6> -->
-<?php $panelNumeber = $panelNumeber + 1; ?>
-
-
+	<?php $panelNumeber = $panelNumeber + 1; ?>
 	  <div class="panel panel-default">
 	    <div class="panel-heading" role="tab" id="headingOne">
 	      <h2 class="panel-title">
@@ -83,7 +79,6 @@ $contacto = new WP_Query("category_name=contacto");
 	        <?php the_content() ?>
 	      </div>
 	    </div>
-
 				
 			<?php endwhile; ?>
 		<?php endif; ?>

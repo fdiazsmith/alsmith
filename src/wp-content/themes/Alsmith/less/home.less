@@ -1,10 +1,33 @@
 @import './mixins.less';
 @import './vars-and-metrics.less';
 
+
+.fade-in(){
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+@-webkit-keyframes fade-in {.fade-in;}
+@-moz-keyframes fade-in {.fade-in;}
+@-ms-keyframes fade-in {.fade-in;}
+@-o-keyframes fade-in {.fade-in;}
+@keyframes fade-in {.fade-in;}
+.blink(){
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+@-webkit-keyframes blink {.blink;}
+@-moz-keyframes blink {.blink;}
+@-ms-keyframes blink {.blink;}
+@-o-keyframes blink {.blink;}
+@keyframes blink {.blink;}
+
+
 #main{
   margin: 0;//consider taking this out from the main css. 
   width: 100%;
 }
+
+
 
 header{
   opacity: 0;
@@ -14,49 +37,72 @@ header{
     pointer-events: auto;
     .container{
       opacity: 1;
-      // pointer-events: inital;
     }
   }
   .container{
     opacity: 0;
-    // pointer-events: none;
     .transition(opacity 550ms ease-in)
   }
   .transition(opacity 300ms ease);
 }
 
-#landing-wrapper{
 
+
+#landing-wrapper{
+  position: relative;
   height: 800px;
   width: 100%;
   display: block;
-  background-color: white;
-  color: rgb(56, 46, 114);
+  .animation(fade-in, 1522ms, 0, ease-in, 1, normal);
+  
+  .top{
+    position: relative;
+    // height: 50%;
+  }
+  .row{
+    margin: 0;
+  }
   
   .background{
-    margin: 4em 3em;
+    // margin: 4em 0em;
     position: relative;
+    height: 100%;
+    // background-color: white;
   }
   .info{
     position: absolute;
+    bottom: 0;
     display: block;
-    margin-top: 35%;
     width: 100%;
+    padding: 1em 3em;
+    background-color: @blue;
+    color: white;
+    a{
+      color: white;
+    }
+    .land-line{
+      background-color: white;
+    }
     // background: red;
   }
   .chevron-down{
     margin: 0 auto;
     position: relative;
     width: 100%;
+    
     // margin-top: 45%;
     .flex-display();
     img{
+      cursor: pointer;
       margin: 0 auto;
-      width: 4em;
+      width: 3em;
     }
-    .animation(blink 500ms);
+    
+    .animation (blink, 1800ms,  0,  ease, infinite,  alternate);
   }
 }
+
+
 
 #accordion{
   background-color: red;
