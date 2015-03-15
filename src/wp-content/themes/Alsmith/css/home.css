@@ -169,6 +169,9 @@ header .container {
   background-color: red;
   width: 100%;
 }
+#accordion .panel {
+  box-shadow: none;
+}
 #accordion .panel .panel-heading {
   border: none;
 }

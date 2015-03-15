@@ -12,15 +12,17 @@ $(document).ready(function(){
 	// $('.collapse').collapse({
 	//   toggle: false
 	// })
-	$('.panel-title').on('click', function(){
-		$(".collapse").collapse("hide");
+	$('.panel-title').on('click', function(event){
+		event.preventDefault();
+		// $(".collapse").collapse("hide");
+		// $(this).collapse("show");
 
 		console.log("click", $(this));
 	});
 	// .collapse({
 	//   toggle: false
 	// })
-
+$("#collapse-1").collapse("show");
 
 
 

@@ -63,25 +63,25 @@ $contacto = new WP_Query("category_name=contacto");
 			 if( $query->have_posts() ) :
 				 while ($query->have_posts()) : $query->the_post(); 
 					 echo get_the_post_thumbnail( $query->ID, 'thumbnail' ); ?> 
-				<!-- look for has post format  -->
-				<!-- <h6> <?php the_title() ?> </h6> -->
-	<?php $panelNumeber = $panelNumeber + 1; ?>
-	  <div class="panel panel-default">
-	    <div class="panel-heading" role="tab" id="headingOne">
-	      <h2 class="panel-title">
-	        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-<?php echo $panelNumeber ?>" aria-expanded="true" aria-controls="collapse-<?php echo $panelNumeber ?>">
-	          <?php the_title() ?>
-	        </a>
-	      </h2>
-	    </div>
-	    <div id="collapse-<?php echo $panelNumeber ?>" class="panel-collapse collapse <?php if ($panelNumeber ==1) echo 'in'?>" role="tabpanel" aria-labelledby="headingOne">
-	      <div class="panel-body">
-	        <?php the_content() ?>
-	      </div>
-	    </div>
-				
-			<?php endwhile; ?>
-		<?php endif; ?>
+
+						<?php $panelNumeber = $panelNumeber + 1; ?>
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingOne">
+						      <h2 class="panel-title">
+						        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-<?php echo $panelNumeber ?>" aria-expanded="true" aria-controls="collapse-<?php echo $panelNumeber ?>">
+						          <?php the_title() ?>
+						        </a>
+						      </h2>
+						    </div>
+						    <div id="collapse-<?php echo $panelNumeber ?>" class="panel-collapse collapse <?php if ($panelNumeber ==1) echo 'in'?>" role="tabpanel" aria-labelledby="headingOne">
+						      <div class="panel-body">
+						        <?php the_content() ?>
+						      </div>
+						    </div>
+						   
+									
+			<?php endwhile;
+						endif; ?>
 	  </div>
 	</div>
 

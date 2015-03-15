@@ -66,7 +66,7 @@ header {
   font-family: 'Josefin Slab', serif;
   font-size: 18px;
   background-color: white !important;
-  color: #291e61;
+  color: #153978;
 }
 .als {
   font-family: 'Alegreya Sans', sans-serif !important;
@@ -255,66 +255,13 @@ M E T O D O LO G I A
 body[class*="metodologia"] {
   background-color: red;
 }
+footer {
+  position: absolute;
+  bottom: 2em;
+}
 .descropcion-wrapper.affix {
   top: 0px;
   float: right;
   right: 50px;
   position: fixed;
-}
-#todo {
-  background-color: #333;
-  position: relative;
-  z-hmmdex: 10;
-}
-/*
-      _ _     _        __ 
-     | (_)   | |      /_ |
-  ___| |_  __| | ___   | |
- / __| | |/ _` |/ _ \  | |
- \__ \ | | (_| |  __/  | |
- |___/_|_|\__,_|\___|  |_|
-                          
-                          
-*/
-#slide-1 {
-  background-color: blue;
-}
-/*
-      _ _     _        ___  
-     | (_)   | |      |__ \ 
-  ___| |_  __| | ___     ) |
- / __| | |/ _` |/ _ \   / / 
- \__ \ | | (_| |  __/  / /_ 
- |___/_|_|\__,_|\___| |____|
-                            
-                            
-*/
-#slide-2 {
-  background-color: orange;
-}
-/*
-      _ _     _        ____  
-     | (_)   | |      |___ \ 
-  ___| |_  __| | ___    __) |
- / __| | |/ _` |/ _ \  |__ < 
- \__ \ | | (_| |  __/  ___) |
- |___/_|_|\__,_|\___| |____/ 
-                             
-                             
-*/
-#slide-3 {
-  background-color: green;
-}
-/*
-      _ _     _        _  _   
-     | (_)   | |      | || |  
-  ___| |_  __| | ___  | || |_ 
- / __| | |/ _` |/ _ \ |__   _|
- \__ \ | | (_| |  __/    | |  
- |___/_|_|\__,_|\___|    |_|  
-                              
-                              
-*/
-#slide-4 {
-  background-color: pink;
 }
