@@ -90,15 +90,7 @@
 			   // $menu_list now ready to output
 					print $menu_list;
        ?>
-      <ul class="nav navbar-nav navbar-left ">
-      <?php// wp_nav_menu(array('menu' => 'Main Navigation')) ?> <!-- this works -->
-      
 
-        <!-- there is a problem with the number list items it does not reflow correctly. -->
-
-    
-
-      </div><!--  contacto collapse -->
     </div> <!-- /.navbar-collapse -->
 	  </div>
 	</header>
