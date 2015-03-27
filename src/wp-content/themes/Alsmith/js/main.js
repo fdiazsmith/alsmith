@@ -11,7 +11,9 @@ $.fn.scrollEnd = function(callback, timeout) {
     $this.data('scrollTimeout', setTimeout(callback,timeout));
   });
 };
-
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
 
 
@@ -24,6 +26,7 @@ var ALS = {};
 	_.init = function(){
 		ALS.getElements();
 		_.registerEventListeners();
+		
 		console.log("finished init",_.elem);
 	}
 	
@@ -32,7 +35,9 @@ var ALS = {};
 				$window : $(window)
 			, $header : $('header')
 			, $main : $('#main')
+			, $body : $('body')
 		}
+		ALS.isHome = (ALS.elem.$body.hasClass("home"))? true : false;
 		if(typeof(callback) == "function"){
 			callback();
 		}
@@ -48,7 +53,7 @@ var ALS = {};
 	_.resizeContent = function (){
 		console.log("resizing: main js ");
 		ALS.getMetrics();
-		$('main').css('margin-top', ALS.elem.$header.height()+'px' );
+		if(!ALS.isHome)$('main').css('margin-top', ALS.elem.$header.outerHeight(true)+'px' );
 		$('#nav-servicios').height(ALS.windowHeight);
 		
 		// offsetHeaderHeight();

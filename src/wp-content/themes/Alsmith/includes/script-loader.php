@@ -157,12 +157,11 @@ function alsmith_frontend_scripts() {
   $scripts_array = array (
 
     'app-bootstrap' => array (
-
       'handle'    => 'bootstrap',
       'src'       => get_bloginfo('template_directory') . '/js/bootstrap.min.js',
       'ver'       => '1.0',
       'deps'      => array('jquery'),
-      'in_footer' => true
+      'in_footer' => false
     ),
 
     'app-main' => array (
@@ -171,32 +170,52 @@ function alsmith_frontend_scripts() {
       'src'       => get_bloginfo('template_directory') . '/js/main.js',
       'ver'       => '1.0',
       'deps'      => array('jquery'),
-      'in_footer' => true
+      'in_footer' => false
     ),
   );
 
   if(is_page( 'home' )) {
-
+    
     array_push($scripts_array, $work_page = array (
       'handle'    => 'home-page',
       'src'       => get_template_directory_uri() . '/js/home.js',
       'deps'      => array('jquery'),
-      'in_footer' => true,
+      'in_footer' => false,
       'ver'       => '1.0'
     ));
   }
 
-  if(is_page( 'metodologia' )) {
-
+  if(is_page_template( 'metodologia.php' )) {
+    
     array_push($scripts_array, $news_page = array (
-      'handle'    => 'news-page',
+      'handle'    => 'metodologia-page',
       'src'       => get_template_directory_uri() . '/js/metodologia.js',
       'deps'      => array('jquery'),
-      'in_footer' => true,
+      'in_footer' => false,
       'ver'       => '1.0'
     ));
   }
-
+  elseif (is_page_template( 'servicios.php' )) {
+    
+    array_push($scripts_array, $news_page = array (
+      'handle'    => 'servicios-page',
+      'src'       => get_template_directory_uri() . '/js/servicios.js',
+      'deps'      => array('jquery'),
+      'in_footer' => false,
+      'ver'       => '1.0'
+    ));
+  }
+  elseif (is_page_template( 'ana-luz.php' )) {
+    
+    array_push($scripts_array, $news_page = array (
+      'handle'    => 'ana-luz-page',
+      'src'       => get_template_directory_uri() . '/js/ana-luz.js',
+      'deps'      => array('jquery'),
+      'in_footer' => false,
+      'ver'       => '1.0'
+    ));
+  }
+  
 
  
   foreach($scripts_array as $value) {

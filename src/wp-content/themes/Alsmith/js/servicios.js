@@ -19,7 +19,11 @@ $(document).ready(function(){
 
 		console.log("click", $(this));
 	});
-	
+// 	$('#tab-menu a').click(function (event) {
+//   event.preventDefault()
+//   $(this).tab('show');
+// 	console.log("clicked on tab",$(this));
+// })
 
 	_.handleScroller = function(topPos){
 
@@ -49,7 +53,7 @@ $(document).ready(function(){
 	_.resizeContent = function(){
 		ALS.getMetrics();
 		console.log("resizing content from metodologia js ");
-		ALS.elem.$main.css({"margin-top" : ""+ALS.elem.$header.height()+"px" });
+		ALS.elem.$main.css({"margin-top" : ""+ALS.elem.$header.outerHeight(true)+"px" });
 		// ALS.elem.$landing.css({"height" : ""+ALS.windowHeight+"px"});
 		// ALS.elem.$main.css({"min-height" : ""+ALS.windowHeight+"px", "width" :""+ALS.windowWidth+"px", "color": "red"});
 		// console.log(ALS.elem.$main, ALS.windowHeight);
@@ -57,5 +61,5 @@ $(document).ready(function(){
 
 
 	_.resizeContent();
-	console.log("metodologia js loaded");
+	console.log("Servicios js loaded");
 });

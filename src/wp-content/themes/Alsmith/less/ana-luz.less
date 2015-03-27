@@ -1,0 +1,66 @@
+@import './mixins.less';
+@import './vars-and-metrics.less';
+
+
+.fade-in(){
+    0%  {opacity: 0;}
+    100%{opacity: 1;}
+}
+@-webkit-keyframes fade-in {.fade-in;}
+@-moz-keyframes fade-in {.fade-in;}
+@-ms-keyframes fade-in {.fade-in;}
+@-o-keyframes fade-in {.fade-in;}
+@keyframes fade-in {.fade-in;}
+.blink(){
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+@-webkit-keyframes blink {.blink;}
+@-moz-keyframes blink {.blink;}
+@-ms-keyframes blink {.blink;}
+@-o-keyframes blink {.blink;}
+@keyframes blink {.blink;}
+
+
+#main{
+  // margin: 0;//consider taking this out from the main css. 
+  // width: 100%;
+}
+#accordion{
+	width:auto;
+}
+.panel-group.core{
+	display: inline-block;
+	// position: absolute;
+
+}
+
+
+#addendums{
+	position: absolute;
+	display: inline-block;	
+	height: 100%;
+	background-color: @orange;
+	.panel{
+		background-color: transparent;
+		margin-top: 0;
+	}
+	.panel-heading{
+		padding: 0;
+	}
+	.panel-collapse{
+		background-color: lighten(@orange, 10%);
+	}
+	.panel-title{
+		a{
+		font-size: 0.4em;
+		text-align: left;
+		}
+	}
+	
+}
+
+
+
+
+

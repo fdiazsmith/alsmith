@@ -60,20 +60,41 @@
         break;
 
 
-      case 'work' : //work page styles
+      case 'Metodologia' : //work page styles 
+      //it was not working for metodologia.
+      break;
 
-        array_push($styles_array, $home_page = array (
-          'handle'    => 'work-page',
-          'src'       => get_template_directory_uri() . '/core/styles/work-page.css',
+    } //endswitch (page)
+    if(is_page_template( 'metodologia.php' )){
+              array_push($styles_array, $home_page = array (
+          'handle'    => 'metodologia-page',
+          'src'       => get_template_directory_uri() . '/css/metodologia.css',
           'deps'      => 'array()',
           'media'     => 'screen',
           'ver'       => '1.0'
         ));
 
-        break;
+    }
+    elseif(is_page_template( 'servicios.php' )){
+              array_push($styles_array, $home_page = array (
+          'handle'    => 'servicios-page',
+          'src'       => get_template_directory_uri() . '/css/servicios.css',
+          'deps'      => 'array()',
+          'media'     => 'screen',
+          'ver'       => '1.0'
+        ));
 
-    } //endswitch (page)
+    }
+    elseif(is_page_template( 'ana-luz.php' )){
+              array_push($styles_array, $home_page = array (
+          'handle'    => 'ana-luz-page',
+          'src'       => get_template_directory_uri() . '/css/ana-luz.css',
+          'deps'      => 'array()',
+          'media'     => 'screen',
+          'ver'       => '1.0'
+        ));
 
+    }
     foreach($styles_array as $value) {
 
       wp_register_style( 

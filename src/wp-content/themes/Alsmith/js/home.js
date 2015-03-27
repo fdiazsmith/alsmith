@@ -9,20 +9,20 @@ $(document).ready(function(){
 
 	_.elem.$landing = $("#landing-wrapper");
 	_.elem.$chevron = $("#chevron-down");
-	// $('.collapse').collapse({
-	//   toggle: false
-	// })
+	$('.collapse').collapse({
+	  toggle: false
+	});
 	$('.panel-title').on('click', function(event){
-		event.preventDefault();
-		// $(".collapse").collapse("hide");
-		// $(this).collapse("show");
+		// event.preventDefault();
+		$(".collapse").collapse("hide");
+		// // $(this).collapse("show");
 
 		console.log("click", $(this));
 	});
 	// .collapse({
 	//   toggle: false
 	// })
-$("#collapse-1").collapse("show");
+// $("#collapse-1").collapse("show");
 
 
 

@@ -1,0 +1,69 @@
+@import './mixins.less';
+@import './vars-and-metrics.less';
+
+
+.fade-in(){
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+@-webkit-keyframes fade-in {.fade-in;}
+@-moz-keyframes fade-in {.fade-in;}
+@-ms-keyframes fade-in {.fade-in;}
+@-o-keyframes fade-in {.fade-in;}
+@keyframes fade-in {.fade-in;}
+.blink(){
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+@-webkit-keyframes blink {.blink;}
+@-moz-keyframes blink {.blink;}
+@-ms-keyframes blink {.blink;}
+@-o-keyframes blink {.blink;}
+@keyframes blink {.blink;}
+
+
+#main{
+  margin: 0;//consider taking this out from the main css. 
+  width: 100%;
+}
+
+#panel-wrapper{
+// width: 100%;
+// background-color: blue;
+}
+#myTab{
+
+  // float: left;
+  // height: 727px;
+  height: 100%;
+  
+  list-style: none;
+  background-color: red;
+
+	li{
+		margin-top: 0;
+		padding: 1.4em 2em 0 2em;
+		a{
+			color: @blue; 
+			background-color: transparent; 
+			border: none; 
+			// border-bottom-color: transparent;
+			cursor: default;
+		}
+		&:hover{
+			background-color: lighten(red, 20%)
+		}
+	}
+}
+.tab-content{
+	// position: absolute;
+	// display: inline-block;
+	margin: 2em 0 0 15em;
+	max-width: 800px;
+}
+
+
+
+
+
+

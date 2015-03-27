@@ -31,7 +31,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="/favicon.ico">
 	
-	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,400,300italic|Open+Sans:400,700|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,400,300italic|Open+Sans:400,700|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'> -->
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic|Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -53,7 +54,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="index.php">
+      <a href="home">
         <div class="brand " style="background-image: url('<?php echo get_template_directory_uri();?>/images/logo.jpg');" >   
 	        <?php// echo get_option('home'); ?> <?php //bloginfo('name'); ?>
           <div class="navbar-brand als" href="#"><span class="Al">AL</span><span class="Smith">Smith</span> <span class="associados">y Associados</span></div>

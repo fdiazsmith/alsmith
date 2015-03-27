@@ -8,7 +8,7 @@
 }
 .contacto-title {
   padding-top: 20px;
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .content {
   font-family: 'Josefin Slab', serif;
@@ -39,12 +39,15 @@ font-family: 'Josefin Slab', serif;
 font-family: 'Alegreya Sans', sans-serif;
 */
 body {
-  font-family: 'Alegreya Sans', sans-serif !important;
+  font-family: 'Josefin Sans', sans-serif !important;
   font-size: 18px;
+  position: relative;
+  min-height: 100%;
 }
 #main {
   width: 70%;
   margin: 0 auto;
+  margin-bottom: 3em !important;
 }
 a {
   text-decoration: none;
@@ -67,9 +70,10 @@ header {
   font-size: 18px;
   background-color: white !important;
   color: #153978;
+  margin-bottom: 0 !important;
 }
 .als {
-  font-family: 'Alegreya Sans', sans-serif !important;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .Al {
   font-weight: 900;
@@ -158,110 +162,55 @@ $$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
 
 
 */
-@media (min-width: 768px) {
-  .descropcion-wrapper {
-    margin-top: 300px;
-  }
-}
-.jumbotron {
-  padding-top: 95px !important;
-  background-position: 50% 50%;
-  background-size: cover;
-}
-.autor {
-  text-align: right;
-}
-.frases {
-  position: fixed;
-  width: 100%;
-  /*z-index: 10;*/
-}
-.frase p .highlight {
-  background-color: rgba(250, 250, 250, 0.8);
-  min-height: 90px;
-  padding: 3px 0px 3px 10px;
-}
-#side-nav.affix {
-  top: 193px;
-}
-#side-nav {
-  /*position: fixed;*/
-  top: 250px;
-  z-index: 700;
-  font-family: 'Josefin Slab', serif;
-}
-.descropcion-wrapper {
-  position: relative;
-  margin-top: 275px;
-}
-.descropcion-wrapper:last-child {
-  padding-bottom: 200px;
-}
-.descripcion {
-  position: relative;
-  background-color: white;
-  min-height: 300px;
-  width: 100%;
-  margin-bottom: 200px;
-  /*overflow-y: scroll; */
-}
-.bg {
-  position: relative;
+.panel-group {
   width: 100%;
 }
-.active {
-  /*background-color: whitesmoke !important;*/
+.panel-group .panel {
+  box-shadow: none;
+}
+.panel-group .panel .panel-heading {
   border: none;
 }
-.algo {
+.panel-group .panel .panel-title {
+  font-size: 1.8em;
+  text-align: center;
+  color: #153978;
+}
+.panel-group .panel .panel-title a {
+  text-align: center;
+  margin: 0 auto;
+  width: 30%;
+  display: relative;
+}
+.panel-group .panel .panel-title a:hover {
+  color: green;
+}
+.panel-group .panel .panel-body {
+  border-top: none !important;
+  padding: 3em 2em;
+  border: none;
+  margin: 0 auto;
+  width: 70%;
+  max-width: 800px;
+  color: #153978;
+}
+.panel-group .panel .panel-collapse {
+  background-color: #ececec;
+}
+footer {
   position: relative;
-  top: 280px;
-}
-.explicacion {
-  position: relative;
-  z-index: 20;
-  height: 200px;
-}
-/*
- S E R V I C I O S
-*/
-hr {
-  height: 1px;
-  background-color: #333;
-  border: 1px;
-}
-.line-divider {
-  height: 1px;
-  background-color: rgba(36, 36, 36, 0.5);
-  border: 1px;
+  bottom: 0;
+  text-align: center;
   width: 100%;
-  margin: 80px -10px;
-  display: inline-block;
 }
-#nav-servicios {
-  background-color: #c8c8c8;
+button {
+  border: none;
+  -webkit-appearance: button;
+  background-color: transparent;
 }
-#sevicios-main {
-  background-color: white;
-}
-#sevicios-main p {
-  margin: auto 5%  auto 7%;
-  line-height: 2em;
-  max-width: 700px;
+button:focus {
+  outline: none;
 }
 /*
 M E T O D O LO G I A
 */
-body[class*="metodologia"] {
-  background-color: red;
-}
-footer {
-  position: absolute;
-  bottom: 2em;
-}
-.descropcion-wrapper.affix {
-  top: 0px;
-  float: right;
-  right: 50px;
-  position: fixed;
-}

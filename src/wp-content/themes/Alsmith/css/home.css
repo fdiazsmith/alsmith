@@ -165,38 +165,5 @@ header .container {
   margin: 0 auto;
   width: 3em;
 }
-#accordion {
-  background-color: red;
-  width: 100%;
-}
-#accordion .panel {
-  box-shadow: none;
-}
-#accordion .panel .panel-heading {
-  border: none;
-}
-#accordion .panel .panel-title {
-  font-size: 1.8em;
-  text-align: center;
-  color: #153978;
-}
-#accordion .panel .panel-title a {
-  text-align: center;
-  margin: 0 auto;
-  width: 30%;
-  display: relative;
-}
-#accordion .panel .panel-title a:hover {
-  color: green;
-}
-#accordion .panel .panel-body {
-  padding: 3em 2em;
-  border: none;
-  margin: 0 auto;
-  width: 70%;
-  max-width: 800px;
-  color: #153978;
-}
-#accordion .panel .panel-collapse {
-  background-color: #ececec;
-}
+/** si acaso usa esta parte para dar colores especificos
+  **********************************/

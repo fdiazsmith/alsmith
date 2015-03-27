@@ -7,7 +7,8 @@
 }
 .contacto-title{
   padding-top: 20px;
-  font-family: 'Alegreya Sans', sans-serif;
+  // font-family: 'Alegreya Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .content{
 
@@ -41,12 +42,16 @@ font-family: 'Josefin Slab', serif;
 font-family: 'Alegreya Sans', sans-serif;
 */
 body{
-font-family: 'Alegreya Sans', sans-serif !important;
+// font-family: 'Alegreya Sans', sans-serif !important;
+font-family: 'Josefin Sans', sans-serif !important;
 font-size: @baseline-text-size;
+position: relative;
+min-height: 100%;
 }
 #main{
   width: 70%;
   margin: 0 auto; 
+  margin-bottom: 3em !important;
 }
 
 a{
@@ -70,9 +75,11 @@ header{
   font-size:  @baseline-text-size;
   background-color: white !important;
   color: @blue;
+  margin-bottom: 0 !important;
 }
 .als{
-  font-family: 'Alegreya Sans', sans-serif !important;
+  // font-family: 'Alegreya Sans', sans-serif !important;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .Al{
 
@@ -178,126 +185,149 @@ $$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
 
 
 */
-main{
+
+
+
+.panel-group{
+  width: 100%;
+  .panel{
+    box-shadow: none;
+    .panel-heading{
+      border: none;
+
+    }
+    .panel-title{
+      font-size: @h2;
+      text-align: center;
+      color: @blue;
+      a{
+        &:hover{
+          color: green;
+        }
+      text-align: center;
+      margin: 0 auto;
+      width: 30%;
+      display: relative;
+      }
+    }
+    .panel-body{
+      border:none;
+      border-top:none !important;
+      padding: 3em 2em;
+      border: none;
+      margin: 0 auto;
+      width: 70%;
+      max-width: 800px;
+      color: @blue;
+    }
+    .panel-collapse{
+      background-color: @gray;
+    }
+  }
 
 }
 
-@media (min-width: 768px){
 
-  #side-nav{  }
-  .descropcion-wrapper{margin-top: 300px;}
-}
-.jumbotron{
-  padding-top: 95px !important;
-  background-position: 50% 50%;
-  background-size: cover;
-}
-.autor{
-  text-align: right;
-}
-.frases{
-  position: fixed;
-width: 100%;
-/*z-index: 10;*/
 
-}
-.frase p .highlight{
-background-color: rgba(250,250,250, .8) ;  
-min-height: 90px;
-  padding: 3px 0px 3px 10px;
-}
-.frase p {
-
-}
-#side-nav.affix{
-  top: 193px;
-}
-#side-nav{
-  /*position: fixed;*/
-  top: 250px;
-  z-index: 700;
-  font-family: 'Josefin Slab', serif;
-}
-.descropcion-wrapper{
+footer{
   position: relative;
-    margin-top: 275px;
-}
-.descropcion-wrapper:last-child{
-  padding-bottom: 200px;
-}
-.descripcion{
-  position: relative;
-  background-color: white;
-  min-height: 300px;
-    width: 100%;
-     margin-bottom: 200px;
-
-  /*overflow-y: scroll; */
-}
-.bg{
-  position: relative;
+  bottom: 0;
+  text-align: center;
   width: 100%;
 }
-.active{
-  /*background-color: whitesmoke !important;*/
+
+
+// OVERRIDES
+
+button{
   border: none;
+  -webkit-appearance: button; 
+  background-color: transparent;
+  &:focus{
+  outline: none;
+  }
 }
-.algo{
-  position: relative;
-  top: 280px;
-}
-.explicacion{
+
+
+
+
+
+// @media (min-width: 768px){
+
+//   #side-nav{  }
+//   .descropcion-wrapper{margin-top: 300px;}
+// }
+// .jumbotron{
+//   padding-top: 95px !important;
+//   background-position: 50% 50%;
+//   background-size: cover;
+// }
+// .autor{
+//   text-align: right;
+// }
+// .frases{
+//   position: fixed;
+// width: 100%;
+// /*z-index: 10;*/
+
+// }
+// .frase p .highlight{
+// background-color: rgba(250,250,250, .8) ;  
+// min-height: 90px;
+//   padding: 3px 0px 3px 10px;
+// }
+// .frase p {
+
+// }
+// #side-nav.affix{
+//   top: 193px;
+// }
+// #side-nav{
+//   /*position: fixed;*/
+//   top: 250px;
+//   z-index: 700;
+//   font-family: 'Josefin Slab', serif;
+// }
+// .descropcion-wrapper{
+//   position: relative;
+//     margin-top: 275px;
+// }
+// .descropcion-wrapper:last-child{
+//   padding-bottom: 200px;
+// }
+// .descripcion{
+//   position: relative;
+//   background-color: white;
+//   min-height: 300px;
+//     width: 100%;
+//      margin-bottom: 200px;
+
+//   /*overflow-y: scroll; */
+// }
+// .bg{
+//   position: relative;
+//   width: 100%;
+// }
+// .active{
+//   /*background-color: whitesmoke !important;*/
+//   border: none;
+// }
+// .algo{
+//   position: relative;
+//   top: 280px;
+// }
+// .explicacion{
  
-  position: relative;
-  z-index: 20;
-  height: 200px;
+//   position: relative;
+//   z-index: 20;
+//   height: 200px;
+// }
 
-
-}
-/*
- S E R V I C I O S
-*/
-hr{
-  height: 1px;
-  background-color: #333;
-  border:1px;
-}
-.line-divider{
-  height: 1px;
-  background-color:rgba(36,36,36,.5);
-  border:1px;
-  width: 100%;
-  margin: 80px -10px ; 
-  display: inline-block;
-}
-#nav-servicios{
-background-color: rgb(200,200,200);
-}
-#sevicios-main{
-  background-color: white;
-}
-#sevicios-main p{
-margin: auto 5%  auto 7%;
-line-height: 2em;
-  max-width: 700px;
-}
 
 /*
 M E T O D O LO G I A
 */
-body[class*="metodologia"]{
-  background-color: red;
-}
-footer{
-  position: absolute;
-  bottom: 2em;
-}
-.descropcion-wrapper.affix{
-  top: 0px;
-  float: right;
-  right: 50px;
-  position: fixed;
-}
-
-
+// body[class*="metodologia"]{
+//   background-color: red;
+// }
 
