@@ -76,6 +76,18 @@
   background: -ms-linear-gradient(top, @startColor, @endColor);
   background: -o-linear-gradient(top, @startColor, @endColor);
 }
+.radial-gradient(@startColor: #eee, @endColor: white, @startOpacity: 100%, @endOpacity: 0%){
+  background-color: @startColor;
+  @start: fade(@startColor, @startOpacity);
+  background: -moz-radial-gradient(center, ellipse cover,  fade(@startColor, @startOpacity) 0%, fade(@endColor, @endOpacity) 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,fade(@startColor, @startOpacity)), color-stop(100%,fade(@endColor, @endOpacity))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  fade(@startColor, @startOpacity) 0%,fade(@endColor, @endOpacity) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  fade(@startColor, @startOpacity) 0%,fade(@endColor, @endOpacity) 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  fade(@startColor, @startOpacity) 0%,fade(@endColor, @endOpacity) 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  fade(@startColor, @startOpacity) 0%,fade(@endColor, @endOpacity) 100%); /* W3C */
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#001e5799',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
 .horizontal-gradient (@startColor: #eee, @endColor: white) {
   background-color: @startColor;
   background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
