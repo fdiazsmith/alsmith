@@ -93,7 +93,15 @@
           'media'     => 'screen',
           'ver'       => '1.0'
         ));
-
+    }
+    elseif(is_page_template( 'contacto.php' )){
+              array_push($styles_array, $home_page = array (
+          'handle'    => 'contacto-page',
+          'src'       => get_template_directory_uri() . '/css/contacto.css',
+          'deps'      => 'array()',
+          'media'     => 'screen',
+          'ver'       => '1.0'
+        ));
     }
     foreach($styles_array as $value) {
 

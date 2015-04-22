@@ -46,7 +46,7 @@ function alsmith_backend_scripts() {
     'in_footer' => true,
     'ver'       => '1.0'
   ));
-
+  
 
   if($typenow == 'page') { // add custom page scripts
 
@@ -215,7 +215,16 @@ function alsmith_frontend_scripts() {
       'ver'       => '1.0'
     ));
   }
-  
+  elseif (is_page_template( 'contacto.php' )) {
+    
+    array_push($scripts_array, $news_page = array (
+      'handle'    => 'contacto-page',
+      'src'       => get_template_directory_uri() . '/js/contacto.js',
+      'deps'      => array('jquery'),
+      'in_footer' => false,
+      'ver'       => '1.0'
+    ));
+  }
 
  
   foreach($scripts_array as $value) {
