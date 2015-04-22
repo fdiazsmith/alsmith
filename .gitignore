@@ -5,6 +5,7 @@
  
 /src/wp-content/themes/twentyfifteen/**
 /src/wp-content/themes/twentyfourteen/**
+/src/wp-content/backups/**
 
 # GRUNT DEVELOPMENT
 ########################
