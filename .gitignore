@@ -105,3 +105,9 @@ wp-config.php
 **/wp-content/uploads/
 **/wp-content/plugins/
 src/wordpress/wp-admin/css/colors/sunrise/colors.css
+
+src/wp-content/plugins/akismet/_inc/form.js
+
+src/wp-content/plugins/akismet/_inc/form.js
+
+src/wp-content/plugins/akismet/.htaccess
