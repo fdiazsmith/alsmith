@@ -44,6 +44,12 @@ body {
   position: relative;
   min-height: 100%;
 }
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
 #main {
   width: 70%;
   margin: 0 auto;
@@ -69,7 +75,7 @@ header {
   font-family: 'Josefin Slab', serif;
   font-size: 18px;
   background-color: white !important;
-  color: #153978;
+  color: #3b426b;
   margin-bottom: 0 !important;
 }
 .als {
@@ -174,7 +180,7 @@ $$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
 .panel-group .panel .panel-title {
   font-size: 1.8em;
   text-align: center;
-  color: #153978;
+  color: #3b426b;
 }
 .panel-group .panel .panel-title a {
   text-align: center;
@@ -192,10 +198,10 @@ $$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
   margin: 0 auto;
   width: 70%;
   max-width: 800px;
-  color: #153978;
+  color: #3b426b;
 }
 .panel-group .panel .panel-collapse {
-  background-color: #ececec;
+  background-color: #cccccc;
 }
 footer {
   position: relative;
@@ -210,6 +216,13 @@ button {
 }
 button:focus {
   outline: none;
+}
+footer {
+  background-color: red;
+  position: relative;
+  height: 100px;
+  min-height: 100px;
+  padding: 30px;
 }
 /*
 M E T O D O LO G I A
