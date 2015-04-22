@@ -4,6 +4,9 @@
  * Description: pagina inicial
  */
 
+$bg_img = wp_get_attachment_image_src( get_post_thumbnail_id( $query->ID ),"full" );  
+// $bg_img = get_the_post_thumbnail( $query->ID );
+
 //Create a new WP_Query Object
 $contacto = new WP_Query("category_name=contacto");
 
@@ -14,7 +17,10 @@ $contacto = new WP_Query("category_name=contacto");
 <?php  get_header(); ?>
 
 <section id="landing-wrapper" >
-	<div class="background">
+	<div class="background" style="background-image: url(<?php echo $bg_img[0]; ?> );">
+	</div>
+	<div id="content-landing">
+
 	<?php if( $contacto->have_posts() ) :?>
   <?php while ($contacto->have_posts()) : $contacto->the_post(); ?>
   
@@ -24,7 +30,7 @@ $contacto = new WP_Query("category_name=contacto");
 			<img class="img-responsive" src="<?php echo get_header_image() ?>">
 	  </div>
   </div>
-  
+ 
 	    
 		<div class="row">
 			<div class=" info" >

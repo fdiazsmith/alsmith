@@ -27,7 +27,12 @@
   width: 100%;
 }
 
+.background-img{
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 
+}
 
 header{
   opacity: 0;
@@ -53,52 +58,74 @@ header{
   height: 800px;
   width: 100%;
   display: block;
-  .animation(fade-in, 1522ms, 0, ease-in, 1, normal);
   
-  .top{
-    position: relative;
-    // height: 50%;
-  }
-  .row{
-    margin: 0;
-  }
-  
+  // img {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   opacity: .3;
+  // }
   .background{
-    // margin: 4em 0em;
-    position: relative;
-    height: 100%;
-    // background-color: white;
-  }
-  .info{
     position: absolute;
-    bottom: 0;
-    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
-    padding: 1em 3em;
-    background-color: @blue;
-    color: white;
-    a{
-      color: white;
-    }
-    .land-line{
-      background-color: white;
-    }
-    // background: red;
+    // opacity: .4;
+    .background-img;
   }
-  .chevron-down{
-    margin: 0 auto;
-    position: relative;
-    width: 100%;
-    
-    // margin-top: 45%;
-    .flex-display();
-    img{
-      cursor: pointer;
-      margin: 0 auto;
-      width: 3em;
+  #content-landing{
+    .animation(fade-in, 2000ms, 0, ease-in, 1, normal);
+    @height-color-split : 60%;
+    @opacity-for-landing-bg:80%;
+    .top{
+      position: absolute;
+      background-color: fade(white, @opacity-for-landing-bg);
+      height: @height-color-split;
+      width: 100%;
+      img{
+        @BG_WHITE: fade(white, 70%);
+        background-color: @BG_WHITE;
+        .box-shadow( 0px 0px 136px 85px  @BG_WHITE);
+        // .radial-gradient(white, 100%, white, 0%);
+      }
     }
-    
-    .animation (blink, 1800ms,  0,  ease, infinite,  alternate);
+    .row{
+      margin: 0;
+    }
+    .info{
+      position: absolute;
+      bottom: 0;
+      top: @height-color-split;
+      display: block;
+      width: 100%;
+      padding: 1em 3em;
+      background-color: fade(@blue, @opacity-for-landing-bg);
+      color: white;
+      a{
+         color: white;
+      }
+      .land-line{
+        background-color: white;
+      }
+      // background: red;
+    }
+    .chevron-down{
+      margin: 0 auto;
+      position: relative;
+      width: 100%;
+      color: white;
+      // margin-top: 45%;
+      .flex-display();
+      img{
+        cursor: pointer;
+        margin: 0 auto;
+        width: 3em;
+      }
+      
+      .animation (blink, 1800ms,  0,  ease, infinite,  alternate);
+    }
   }
 }
 
