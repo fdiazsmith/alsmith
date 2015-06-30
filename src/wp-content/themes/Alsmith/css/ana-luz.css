@@ -89,23 +89,36 @@
 .panel-group.core {
   display: inline-block;
 }
-#addendums {
-  position: absolute;
-  display: inline-block;
-  height: 100%;
-  background-color: #f57e3e;
+#main {
+  margin: 0 auto;
 }
-#addendums .panel {
-  background-color: transparent;
-  margin-top: 0;
+#main .jumbotron {
+  height: 25em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 40%;
 }
-#addendums .panel-heading {
-  padding: 0;
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+  #main .jumbotron {
+    height: 16em;
+  }
 }
-#addendums .panel-collapse {
-  background-color: #f89e6e;
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  #main .jumbotron {
+    height: 10em;
+  }
 }
-#addendums .panel-title a {
-  font-size: 0.4em;
-  text-align: left;
+#main .d {
+  margin: 0 15%;
+}
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+  #main .d {
+    margin: 0 5%;
+  }
+}
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  #main .d {
+    margin: 0 0;
+  }
 }

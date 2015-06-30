@@ -9,6 +9,8 @@ $(document).ready(function(){
 
 	_.elem.$landing = $("#landing-wrapper");
 	_.elem.$chevron = $("#chevron-down");
+
+
 	$('.collapse').collapse({
 	  toggle: false
 	});
@@ -16,8 +18,14 @@ $(document).ready(function(){
 		// event.preventDefault();
 		$(".collapse").collapse("hide");
 		// // $(this).collapse("show");
-
 		console.log("click", $(this));
+	});
+
+	$('div.intro').on('click', function(){
+		window.location.href = "http://"+ _.rootURL+'/metodologia/';
+	});
+	$('#enviar-cv').on('click', function(){
+		window.location.href = "http://"+ _.rootURL+'/contacto/';
 	});
 	// .collapse({
 	//   toggle: false
@@ -78,8 +86,10 @@ $(document).ready(function(){
 		console.log("resizing content from home js ");
 
 		ALS.elem.$main.css({"margin-top" : ""+ALS.elem.$header.height()+"px" });
-		ALS.elem.$landing.css({"height" : ""+ALS.windowHeight+"px"});
-		ALS.elem.$main.css({"min-height" : ""+ALS.windowHeight+"px", "width" :""+ALS.windowWidth+"px", "color": "red"});
+		console.log("dfas",ALS.elem.$landing.find('.info').height());
+
+		ALS.elem.$landing.css({"min-height" : ""+ALS.windowHeight+"px"});
+		ALS.elem.$main.css({"min-height" : ""+ALS.windowHeight*.75+"px", "width" :""+ALS.windowWidth+"px"});
 		console.log(ALS.elem.$main, ALS.windowHeight);
 	}
 

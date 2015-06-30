@@ -1,31 +1,36 @@
-<?php get_header(); ?>
+<?php get_header(); 
+ $panelNumeber = 1;
+?>
+<br><br><br><br>
+<div id="main">
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	<?php if (have_posts()) : while (have_posts()) : the_post(); 
+		$bg_img = wp_get_attachment_image_src( get_post_thumbnail_id( $query->ID ),"full" );
+		// if ($bg_img !== null ) echo "string";
+	?>
 
-		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			
-			<h2><?php the_title(); ?></h2>
-			
-			<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
-
-			<div class="entry">
-				
-				<?php the_content(); ?>
-
-				<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
-				
-				<?php the_tags( 'Tags: ', ', ', ''); ?>
-
-			</div>
-			
-			<?php edit_post_link('Edit this entry','','.'); ?>
-			
-		</div>
-
-	<?php comments_template(); ?>
+						<?php if ($bg_img != "" ): ?>
+												<div class="jumbotron" style="background-image: url(<?php echo $bg_img[0];?> )"></div>
+						<?php endif;?>
+						<div class="panel-group core" id="accordion" role="tablist" aria-multiselectable="true">
+						  <div class="panel panel-default ">
+							    <div class="panel-heading" role="tab" id="heading-<?php echo $panelNumeber?>">
+							      <h2 class="panel-title">
+							        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-<?php echo $panelNumeber ?>" aria-expanded="true" aria-controls="collapse-<?php echo $panelNumeber ?>">
+							          <?php the_title() ?>
+							        </a>
+							      </h2>
+							    </div>
+							    <div id="collapse-<?php echo $panelNumeber ?>" class="panel-collapse collapse  <?php if ($panelNumeber ==1) echo 'in'?>" role="tabpanel" aria-labelledby="headingOne">
+							      <div class="panel-body" style="background-image: url(<?php ?> )">
+							        <?php the_content() ?>
+							      </div>
+							    </div>
+							</div>
+						</div>
 
 	<?php endwhile; endif; ?>
 	
-<?php get_sidebar(); ?>
+</div>
 
 <?php get_footer(); ?>

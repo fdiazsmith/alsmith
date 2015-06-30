@@ -35,29 +35,31 @@
 
 }
 
+#main{
+	margin: 0 auto;
 
-#addendums{
-	position: absolute;
-	display: inline-block;	
-	height: 100%;
-	background-color: @orange;
-	.panel{
-		background-color: transparent;
-		margin-top: 0;
+	.jumbotron{
+		// margin-left: -15%; 
+		height: 25em;
+		@media @tablet-mini {
+			height: 16em;
+		}
+		@media @smartphone {
+			height: 10em;
+		}
+
+		.bg-img();
+		background-position: 50% 40%;
 	}
-	.panel-heading{
-		padding: 0;
-	}
-	.panel-collapse{
-		background-color: lighten(@orange, 10%);
-	}
-	.panel-title{
-		a{
-		font-size: 0.4em;
-		text-align: left;
+	.d{
+		margin: 0 15%;
+		@media @tablet-mini {
+			margin: 0 5%;
+		}
+		@media @smartphone {
+			margin: 0 0;
 		}
 	}
-	
 }
 
 

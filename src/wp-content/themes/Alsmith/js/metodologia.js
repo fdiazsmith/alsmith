@@ -9,17 +9,26 @@ $(document).ready(function(){
 		;
 
 	
-	$('.collapse').collapse({
+
+	$('#accordion .collapse').collapse({
 	  toggle: false
 	});
-	$('.panel-title').on('click', function(event){
+	$('#accordion .panel-title').on('click', function(event){
 		// event.preventDefault();
-		// $(".collapse").collapse("hide");
+		$("#accordion .collapse.e").collapse("hide");
 		// // $(this).collapse("show");
-
-		console.log("click", $(this));
+		console.log("click de afuers", $(this));
 	});
 	
+		$('#accordion-addendums .collapse').collapse({
+	  toggle: false
+	});
+	$('#accordion-addendums .panel-title').on('click', function(event){
+		// event.preventDefault();
+		$("#accordion-addendums .collapse").collapse("hide");
+		// // $(this).collapse("show");
+		console.log("click", $(this));
+	});
 
 	_.handleScroller = function(topPos){
 
@@ -49,9 +58,8 @@ $(document).ready(function(){
 	_.resizeContent = function(){
 		ALS.getMetrics();
 		console.log("resizing content from metodologia js ");
-		ALS.elem.$main.css({"margin-top" : ""+ALS.elem.$header.height()+"px" });
-		// ALS.elem.$landing.css({"height" : ""+ALS.windowHeight+"px"});
-		// ALS.elem.$main.css({"min-height" : ""+ALS.windowHeight+"px", "width" :""+ALS.windowWidth+"px", "color": "red"});
+		ALS.elem.$main.css({"margin-top" : ""+ALS.elem.$header.height()+"px" , "min-height": ALS.windowHeight -ALS.elem.$header.outerHeight(true) - ALS.elem.$footer.outerHeight(true)});
+		// ALS.elem.$main.css({"min-height" : ""+ALS.windowHeight+"px", "width" :""+ALS.windowWidth+"px"});
 		// console.log(ALS.elem.$main, ALS.windowHeight);
 	}
 

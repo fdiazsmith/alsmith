@@ -6,6 +6,16 @@
     0% {opacity: 0;}
     100%{opacity: 1;}
 }
+
+.svg-anim(){
+    from{
+            stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+    }
+    to {stroke-dasharray: 1000;
+      stroke-dashoffset: 0;}
+
+}
 @-webkit-keyframes fade-in {.fade-in;}
 @-moz-keyframes fade-in {.fade-in;}
 @-ms-keyframes fade-in {.fade-in;}
@@ -25,6 +35,42 @@
 #main{
   margin: 0;//consider taking this out from the main css. 
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.intro{
+  h1, h2, p{
+    text-align: center;
+    margin-top: 2em;
+  }
+  h1&{
+    color: @gray;
+  }
+  .img{
+    @size-img: 6em;
+    width: @size-img;
+    height: @size-img;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: @gray-light;
+    .transition(all 450ms ease-in);
+    .border-radius(100%);
+    &:hover{
+      .transition(all 1050ms ease-in);
+      background-color: @yellow;
+    }
+    svg{
+      // stroke-dasharray: 1000;
+      // stroke-dashoffset: 0;
+      .animation(fade-in 400ms  ease-in);
+      &:hover{
+      stroke-dasharray: 1500;
+      stroke-dashoffset: 0;
+      .transition(all 1050ms ease-in);
+      }
+    }
+  }
+
 }
 
 .background-img{
@@ -66,6 +112,21 @@ header{
   //   width: 100%;
   //   opacity: .3;
   // }
+  #tagline{
+    float: left;
+    clear: left;
+    position: relative;
+    color: @blue;
+    margin: 2em 0 0 2em;
+    font-size: 3em;
+
+    @media @tablet {
+    // margin-left: 1em;
+    }
+    @media @smartphone {
+    margin-left: .7em;
+    }
+  }
   .background{
     position: absolute;
     top: 0;
@@ -76,18 +137,61 @@ header{
     .background-img;
   }
   #content-landing{
-    .animation(fade-in, 2000ms, 0, ease-in, 1, normal);
+    .animation(fade-in 2000ms 0 ease-in 1 normal);
     @height-color-split : 60%;
-    @opacity-for-landing-bg:80%;
+    @media @tablet {
+      .top{
+        height: 45% !important;
+      }
+      .info{
+        @height-color-split : 45% !important;
+        top: 45% !important;
+      }
+    }
+    @media @tablet-mini{
+      .top{
+        height: 40% !important;
+      }
+      .info{
+        @height-color-split : 40% !important;
+        top: 40% !important;
+      }
+    }
+    @media @smartphone {
+      .top{
+        height: 35% !important;
+      }
+      .info{
+        @height-color-split : 35% !important;
+        top: 35% !important;
+      }
+    }
+      @opacity-for-landing-bg:80%;
     .top{
       position: absolute;
-      background-color: fade(white, @opacity-for-landing-bg);
+      background-color: fade(@white, @opacity-for-landing-bg);
       height: @height-color-split;
       width: 100%;
       img{
-        @BG_WHITE: fade(white, 70%);
+        @BG_WHITE: fade(@white, 70%);
         background-color: @BG_WHITE;
         .box-shadow( 0px 0px 136px 85px  @BG_WHITE);
+        margin-left: 2em;
+        // width: 100%;
+
+        // @media @large {
+        //   width: 20%;
+        // }
+        // @media @normal {
+        //   width: 30%;
+        // }
+        // @media @tablet {
+        //   width: 35%;
+        // }
+        // @media @smartphone {
+        //   margin-left: 1em;
+        //   width: 10em;
+        // }
         // .radial-gradient(white, 100%, white, 0%);
       }
     }
@@ -102,9 +206,9 @@ header{
       width: 100%;
       padding: 1em 3em;
       background-color: fade(@blue, @opacity-for-landing-bg);
-      color: white;
+      color: @white;
       a{
-         color: white;
+         color: @white;
       }
       .land-line{
         background-color: white;
@@ -124,12 +228,25 @@ header{
         width: 3em;
       }
       
-      .animation (blink, 1800ms,  0,  ease, infinite,  alternate);
+      .animation (blink 1800ms  0  ease infinite  alternate);
     }
   }
 }
 
+#enviar-cv{
+  margin: 5em auto 4em auto;
+  text-align: center;
+  display: block;
+  
+  background-color: @blue;
+  padding: 1em 2em;
+  color: @white;
+}
 
+#enviar-cv-wrapper{
+  display: inline-block;
+  width: 100%;
+}
 /** si acaso usa esta parte para dar colores especificos
   **********************************/
 // #accordion{

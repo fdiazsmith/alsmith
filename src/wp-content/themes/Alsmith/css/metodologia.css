@@ -86,18 +86,39 @@
 #main {
   margin: 0;
   width: 100%;
-}
-#accordion {
-  width: auto;
+  padding-top: 1.8em;
 }
 .panel-group.core {
   display: inline-block;
+}
+.collapse #accordion-addendums {
+  margin-top: 2em;
+  display: inline-block;
+  height: 100%;
+  background-color: transparent;
+}
+.collapse #accordion-addendums .panel {
+  background-color: transparent;
+  margin-top: 0;
+}
+.collapse #accordion-addendums .panel-heading {
+  padding: 0;
+  border-bottom: 2px solid #3b426b;
+}
+.collapse #accordion-addendums .panel-title {
+  text-align: left;
+}
+.collapse #accordion-addendums .panel-title a {
+  font-size: 0.4em;
+}
+.collapse #accordion-addendums .panel-title a:hover {
+  color: #4d568c;
 }
 #addendums {
   position: absolute;
   display: inline-block;
   height: 100%;
-  background-color: #f57e3e;
+  background-color: #fee903;
 }
 #addendums .panel {
   background-color: transparent;
@@ -107,7 +128,7 @@
   padding: 0;
 }
 #addendums .panel-collapse {
-  background-color: #f89e6e;
+  background-color: #feed36;
 }
 #addendums .panel-title a {
   font-size: 0.4em;

@@ -19,7 +19,7 @@
 }
 .land-line {
   height: 2px;
-  background-color: #1a1a1a;
+  background-color: #262626;
 }
 /*
   _______  _______ .__   __.  _______ .______          ___       __      
@@ -43,12 +43,16 @@ body {
   font-size: 18px;
   position: relative;
   min-height: 100%;
+  color: #3b426b;
 }
 h1,
 h2,
 h3,
 h4 {
   font-weight: 700;
+}
+h1 {
+  font-size: 1.8em;
 }
 #main {
   width: 70%;
@@ -59,7 +63,38 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: gray;
+  color: #cccccc;
+}
+@media only screen and (min-width : 1624px) {
+  body {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width : 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+  body {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  body {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
 }
 /*Esta parte es del header nadamas
  __ __    ___   ____  ___      ___  ____  
@@ -74,9 +109,12 @@ a:hover {
 header {
   font-family: 'Josefin Slab', serif;
   font-size: 18px;
-  background-color: white !important;
+  background-color: #fffff8 !important;
   color: #3b426b;
   margin-bottom: 0 !important;
+}
+header li a {
+  color: #3b426b !important;
 }
 .als {
   font-family: 'Josefin Sans', sans-serif;
@@ -85,7 +123,7 @@ header {
   font-weight: 900;
   font-size: 40px;
   font-style: italic;
-  color: #d1d1d1;
+  color: #ededed;
 }
 .brand {
   position: relative;
@@ -97,7 +135,7 @@ header {
   top: -6px;
   margin-left: -37px;
   padding-bottom: -11px;
-  color: #382e72;
+  color: #3b426b;
 }
 .associados {
   position: relative;
@@ -105,7 +143,7 @@ header {
   font-weight: 400;
   font-size: 8px;
   font-style: italic;
-  color: #b4b4b4;
+  color: #ededed;
 }
 @media (max-width: 768px) {
   #side-nav {
@@ -115,29 +153,30 @@ header {
 .contacto-body {
   position: fixed;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.985);
+  background-color: #fffff8;
   height: auto;
   left: 0;
   margin-top: -10px;
   top: 93px;
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid #ededed;
+}
+.brand {
+  background-position: 50% 50%;
+  width: 209px;
+  height: 60px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 @media (min-width: 768px) {
   header {
     height: 83px;
   }
+  .brand {
+    height: 85px;
+  }
   #nav-links {
     margin: 40px 0px 0px 0px;
-  }
-  .brand {
-    background-position: 50% 50%;
-    width: 259px;
-    height: 110px;
-    top: -13px;
-    position: relative;
-    -ms-transform: scale(0.6, 0.6);
-    -webkit-transform: scale(0.6, 0.6);
-    transform: scale(0.6, 0.6);
   }
   .navbar-brand {
     opacity: 0;
@@ -189,7 +228,7 @@ $$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
   display: relative;
 }
 .panel-group .panel .panel-title a:hover {
-  color: green;
+  color: #fee903;
 }
 .panel-group .panel .panel-body {
   border-top: none !important;
@@ -201,13 +240,7 @@ $$ | \_/ $$ |\$$$$$$$ |$$ |$$ |  $$ |
   color: #3b426b;
 }
 .panel-group .panel .panel-collapse {
-  background-color: #cccccc;
-}
-footer {
-  position: relative;
-  bottom: 0;
-  text-align: center;
-  width: 100%;
+  background-color: #ededed;
 }
 button {
   border: none;
@@ -217,13 +250,64 @@ button {
 button:focus {
   outline: none;
 }
+.jumbotron.img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 footer {
-  background-color: red;
   position: relative;
-  height: 100px;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: #3b426b;
+  color: #fffff8;
   min-height: 100px;
   padding: 30px;
 }
-/*
-M E T O D O LO G I A
-*/
+footer button {
+  color: #cccccc;
+  font-size: 0.8em;
+  font-style: italic;
+  font-weight: 100;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+footer button:hover {
+  color: #fffff8;
+  text-decoration: underline;
+}
+footer .modal {
+  color: #3b426b;
+}
+footer .modal .modal-content {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+footer .modal li {
+  list-style: none;
+  text-align: left;
+  margin-top: 1em;
+}
+footer .modal .modal-backdrop {
+  z-index: -1;
+}
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  footer {
+    min-height: 50px;
+    padding: 24px;
+  }
+}
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  footer {
+    min-height: 50px;
+    padding: 18px;
+  }
+}

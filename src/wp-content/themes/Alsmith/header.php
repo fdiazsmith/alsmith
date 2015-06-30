@@ -36,6 +36,7 @@
 
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+	
 
 	<?php if ( is_singular() ) wp_enqueue_script('comment-reply'); ?>
 
@@ -44,7 +45,6 @@
 
 <body <?php body_class(); ?> >
 	
-
 	<header class="navbar navbar-default navbar-fixed-top affix-top" role="navigation">
 		<div class="container">
     <div class="navbar-header">
@@ -55,9 +55,9 @@
         <span class="icon-bar"></span>
       </button>
       <a href="home">
-        <div class="brand " style="background-image: url('<?php echo get_template_directory_uri();?>/images/logo.jpg');" >   
+        <div class="brand img-responsive " style="background-image: url('<?php echo get_header_image() ?>');" >   
 	        <?php// echo get_option('home'); ?> <?php //bloginfo('name'); ?>
-          <div class="navbar-brand als" href="#"><span class="Al">AL</span><span class="Smith">Smith</span> <span class="associados">y Associados</span></div>
+          <!-- <div class="navbar-brand als" href="#"><span class="Al">AL</span><span class="Smith">Smith</span> <span class="associados">y Associados</span></div> -->
         </div>
       </a>
       

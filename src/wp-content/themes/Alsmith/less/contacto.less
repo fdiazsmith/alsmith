@@ -26,5 +26,96 @@
   position: relative;
   display: block;
   padding: 3em 4em;
+	.copy{
+		position: relative;
+		display: block;
+		width: 50%;
+		margin: 0 auto;
+		min-width: 300px;
+	}
+  
+}
+h2{
+	text-align: center;
+}
+div[id*="file_upload"]{
+	padding-top: 2em;
+	margin: 0 auto;
+	color: @blue !important;
+	span[class*="title"]{
+		font-size: 1.8em;
+		font-weight: 600;
+		text-align: center !important;
+		color: @blue !important;
+	}
+	.file_div_clean{
+		width: 100%;
+	}
+	@height-btn:3em;
+	.button-style{
+		height: @height-btn;
+		// background-color: @blue !important;
+		background-image: none !important;
+		width: 100%;
+		color: @white;
+		padding: 1em 2em;
+		.border-radius(0);
+		.transition(all 1s ease);
+	}
+	input[type="button"].file_input_submit,
+	input[type="button"].file_input_submit:hover,
+	input[type="button"].file_input_button{
+		&:hover{
+		background-color: @gray !important;	
+		}
+		.button-style;
+		 background-color: @blue !important;
+	}
+		input[type="button"].file_input_button_hover{
+		&:hover{
+		background-color: @gray !important;	
+		}
+		.button-style;
+		 background-color: @gray !important;
+	}
+	input[type="file"].file_input_hidden,
+	div[id*="file_upload"] input[type="file"].file_input_hidden:hover{
+				&:hover{
+		background-color: @gray !important;	
+		}
+	}
+	form.file_input_uploadform {
+	height: @height-btn;
+	width: 100%;
+	}
+	td[style*="padding: 0 4px"]{
+	width: 80%;
+	}
+	
+	.file_input_textbox_nofile{
+		background-color: @yellow;
+		color: @blue;
+		text-align: center;
+		padding-top: .3em;
+		height: 1.5em;
+	}
+	[class*="input_textbox"], .file_table_clean{
+		width: 100%;
+		border: none;
+		&[id*="fileName"]{
+			 border-bottom: @black solid 2px;
+			 margin-bottom: 1em;
+		}
+	}
+	[class*="message"]{
+		border: @black 2px solid;
+		padding: .4em;
+	}
+	[id*="upload_message"]{
+		
+		[id*="wfu"]{
+			border: none !important;
+		}
+	}
 }
 

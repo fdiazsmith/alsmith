@@ -53,7 +53,9 @@ $(document).ready(function(){
 	_.resizeContent = function(){
 		ALS.getMetrics();
 		console.log("resizing content from metodologia js ");
-		ALS.elem.$main.css({"margin-top" : ""+ALS.elem.$header.outerHeight(true)+"px" });
+			ALS.elem.$main.css({"margin-top"   : ""+ALS.elem.$header.outerHeight(true)+"px"
+												, "min-height" : ""+ALS.windowHeight-ALS.elem.$header.outerHeight(true)-100 + "px"
+												, "width"      : ""+ALS.windowWidth+"px" });
 		// ALS.elem.$landing.css({"height" : ""+ALS.windowHeight+"px"});
 		// ALS.elem.$main.css({"min-height" : ""+ALS.windowHeight+"px", "width" :""+ALS.windowWidth+"px", "color": "red"});
 		// console.log(ALS.elem.$main, ALS.windowHeight);

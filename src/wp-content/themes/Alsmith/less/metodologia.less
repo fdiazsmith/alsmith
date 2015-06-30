@@ -25,9 +25,10 @@
 #main{
   margin: 0;//consider taking this out from the main css. 
   width: 100%;
+  padding-top:1.8em;
 }
 #accordion{
-	width:auto;
+	// width:auto;
 }
 .panel-group.core{
 	display: inline-block;
@@ -36,11 +37,45 @@
 }
 
 
+
+.collapse{
+	#accordion-addendums{
+		margin-top: 2em;
+	// position: absolute;
+	display: inline-block;	
+	height: 100%;
+	background-color: transparent;
+	.panel{
+		background-color: transparent;
+		margin-top: 0;
+	}
+	.panel-heading{
+
+		padding: 0;
+		border-bottom: 2px solid @blue;
+	}
+	.panel-collapse{
+		// background-color: lighten(@yellow, 10%);
+	}
+	.panel-title{
+		text-align: left;
+		a{
+		font-size: 0.4em;
+		&:hover{
+			color: lighten(@blue, 10%)
+		}
+		}
+	}
+	
+	}
+}
+
+
 #addendums{
 	position: absolute;
 	display: inline-block;	
 	height: 100%;
-	background-color: @orange;
+	background-color: @yellow;
 	.panel{
 		background-color: transparent;
 		margin-top: 0;
@@ -49,7 +84,7 @@
 		padding: 0;
 	}
 	.panel-collapse{
-		background-color: lighten(@orange, 10%);
+		background-color: lighten(@yellow, 10%);
 	}
 	.panel-title{
 		a{

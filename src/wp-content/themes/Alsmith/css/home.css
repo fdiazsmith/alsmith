@@ -86,6 +86,58 @@
 #main {
   margin: 0;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.intro h1,
+.intro h2,
+.intro p {
+  text-align: center;
+  margin-top: 2em;
+}
+h1.intro {
+  color: #cccccc;
+}
+.intro .img {
+  width: 6em;
+  height: 6em;
+  margin: 0 auto;
+  padding: 1em;
+  background-color: #ededed;
+  transition: all 450ms ease-in;
+  -webkit-transition: all 450ms ease-in;
+  -moz-transition: all 450ms ease-in;
+  -ms-transition: all 450ms ease-in;
+  -o-transition: all 450ms ease-in;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.intro .img:hover {
+  transition: all 1050ms ease-in;
+  -webkit-transition: all 1050ms ease-in;
+  -moz-transition: all 1050ms ease-in;
+  -ms-transition: all 1050ms ease-in;
+  -o-transition: all 1050ms ease-in;
+  background-color: #fee903;
+}
+.intro .img svg {
+  -webkit-animation: fade-in 400ms ease-in;
+  -moz-animation: fade-in 400ms ease-in;
+  -ms-animation: fade-in 400ms ease-in;
+  animation: fade-in 400ms ease-in;
+}
+.intro .img svg:hover {
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 0;
+  transition: all 1050ms ease-in;
+  -webkit-transition: all 1050ms ease-in;
+  -moz-transition: all 1050ms ease-in;
+  -ms-transition: all 1050ms ease-in;
+  -o-transition: all 1050ms ease-in;
 }
 .background-img {
   background-size: cover;
@@ -122,6 +174,19 @@ header .container {
   width: 100%;
   display: block;
 }
+#landing-wrapper #tagline {
+  float: left;
+  clear: left;
+  position: relative;
+  color: #3b426b;
+  margin: 2em 0 0 2em;
+  font-size: 3em;
+}
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  #landing-wrapper #tagline {
+    margin-left: .7em;
+  }
+}
 #landing-wrapper .background {
   position: absolute;
   top: 0;
@@ -138,17 +203,42 @@ header .container {
   -ms-animation: fade-in 2000ms 0 ease-in 1 normal;
   animation: fade-in 2000ms 0 ease-in 1 normal;
 }
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  #landing-wrapper #content-landing .top {
+    height: 45% !important;
+  }
+  #landing-wrapper #content-landing .info {
+    top: 45% !important;
+  }
+}
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+  #landing-wrapper #content-landing .top {
+    height: 40% !important;
+  }
+  #landing-wrapper #content-landing .info {
+    top: 40% !important;
+  }
+}
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  #landing-wrapper #content-landing .top {
+    height: 35% !important;
+  }
+  #landing-wrapper #content-landing .info {
+    top: 35% !important;
+  }
+}
 #landing-wrapper #content-landing .top {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 248, 0.8);
   height: 60%;
   width: 100%;
 }
 #landing-wrapper #content-landing .top img {
-  background-color: rgba(255, 255, 255, 0.7);
-  -webkit-box-shadow: 0px 0px 136px 85px rgba(255, 255, 255, 0.7);
-  -moz-box-shadow: 0px 0px 136px 85px rgba(255, 255, 255, 0.7);
-  box-shadow: 0px 0px 136px 85px rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 248, 0.7);
+  -webkit-box-shadow: 0px 0px 136px 85px rgba(255, 255, 248, 0.7);
+  -moz-box-shadow: 0px 0px 136px 85px rgba(255, 255, 248, 0.7);
+  box-shadow: 0px 0px 136px 85px rgba(255, 255, 248, 0.7);
+  margin-left: 2em;
 }
 #landing-wrapper #content-landing .row {
   margin: 0;
@@ -161,10 +251,10 @@ header .container {
   width: 100%;
   padding: 1em 3em;
   background-color: rgba(59, 66, 107, 0.8);
-  color: white;
+  color: #fffff8;
 }
 #landing-wrapper #content-landing .info a {
-  color: white;
+  color: #fffff8;
 }
 #landing-wrapper #content-landing .info .land-line {
   background-color: white;
@@ -188,6 +278,18 @@ header .container {
   cursor: pointer;
   margin: 0 auto;
   width: 3em;
+}
+#enviar-cv {
+  margin: 5em auto 4em auto;
+  text-align: center;
+  display: block;
+  background-color: #3b426b;
+  padding: 1em 2em;
+  color: #fffff8;
+}
+#enviar-cv-wrapper {
+  display: inline-block;
+  width: 100%;
 }
 /** si acaso usa esta parte para dar colores especificos
   **********************************/

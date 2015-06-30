@@ -35,9 +35,11 @@ var ALS = {};
 				$window : $(window)
 			, $header : $('header')
 			, $main : $('#main')
+			, $footer : $('footer')
 			, $body : $('body')
 		}
 		ALS.isHome = (ALS.elem.$body.hasClass("home"))? true : false;
+		ALS.rootURL = window.location.href.split("/")[2];
 		if(typeof(callback) == "function"){
 			callback();
 		}
@@ -53,8 +55,10 @@ var ALS = {};
 	_.resizeContent = function (){
 		console.log("resizing: main js ");
 		ALS.getMetrics();
-		if(!ALS.isHome)$('main').css('margin-top', ALS.elem.$header.outerHeight(true)+'px' );
+		if(!ALS.isHome) ALS.elem.$main.css('margin-top', ALS.elem.$header.outerHeight(true)+'px' );
 		$('#nav-servicios').height(ALS.windowHeight);
+		
+		ALS.elem.$main.css({"min-height" : ""+ALS.windowHeight*.75+"px", "width" :""+ALS.windowWidth+"px"});
 		
 		// offsetHeaderHeight();
 	}

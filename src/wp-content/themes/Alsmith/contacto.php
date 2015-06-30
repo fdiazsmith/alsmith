@@ -9,8 +9,6 @@ $query = new WP_Query("category_name=contacto");
 $panelNumeber =0;
 ?>
 
-<br><br><br><br><br><br>
-
 <?php get_header(); ?>
 
 <div id="main">
@@ -21,22 +19,31 @@ $panelNumeber =0;
 
 
 
-			<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+			<!-- <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2> -->
 
 
-			<div class="entry">
-			<?php the_content(); ?>
-			</div>
+			<h4 class="copy">
+				<?php the_content(); ?>
+				<br>
+			</h4>
 
 		<?php endwhile;
 		endif; ?>
 		<?php wp_reset_query(); ?>
-		<div> <?php  the_field("email"); ?>       </div>
-		<div> <?php  the_field("email_cv"); ?>    </div>
-		<div> <?php  the_field("tel"); ?>  		   </div>
-		<div> <?php  the_field("cel"); ?>			   </div>
-		<div> <?php  the_field("text_cv"); ?>		  </div>
-		<div> <?php  the_field("extra_info");  ?>  </div>
+
+		<div class="copy">
+			<p> Ana Luz Smith - <?php  the_field("email"); ?>       </p>
+			<p> Curriculums  - <?php  the_field("email_cv"); ?>    </p>
+			<p> Oficina -  <?php  the_field("tel"); ?>  		   </p>
+			<p> Celular <?php  the_field("cel"); ?>			 </p>
+	  </div>
+		<div> 
+			<?php  the_field("text_cv"); ?>
+		</div>
+		<div>
+			<?php $id_privacidad = get_field("extra_info");  ?>
+		</div>
+
 
 </div>
 <?php get_footer(); ?>
