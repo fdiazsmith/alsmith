@@ -1,18 +1,22 @@
 <?php
 /*
- * Template Name: Contacto
+ * Template Name: Contacto  
  * Description: todo lo de contacto
  */
 
+$args = array(
+	"category_name" => "contacto",
+	"tag" => "espanol"
+);
 //Create a new WP_Query Object
-$query = new WP_Query("category_name=contacto");
+$query = new WP_Query($args);
 $panelNumeber =0;
 ?>
 
 <?php get_header(); ?>
 
 <div id="main">
-	
+
 
 	<?php if( $query->have_posts() ) :
 		while ($query->have_posts()) : $query->the_post(); ?>
@@ -37,7 +41,7 @@ $panelNumeber =0;
 			<p> Oficina -  <?php  the_field("tel"); ?>  		   </p>
 			<p> Celular <?php  the_field("cel"); ?>			 </p>
 	  </div>
-		<div> 
+		<div>
 			<?php  the_field("text_cv"); ?>
 		</div>
 		<div>

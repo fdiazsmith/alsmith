@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  *
@@ -46,7 +46,7 @@ function alsmith_backend_scripts() {
     'in_footer' => true,
     'ver'       => '1.0'
   ));
-  
+
 
   if($typenow == 'page') { // add custom page scripts
 
@@ -99,7 +99,7 @@ function alsmith_backend_scripts() {
         ));
 
         break;
-        
+
         case 'news' :
 
         array_push($scripts_array, $news = array (
@@ -114,19 +114,19 @@ function alsmith_backend_scripts() {
     } //endswitch (posttype)
 
   } // endif
-  
+
 
   foreach($scripts_array as $value) {
-    
-    wp_register_script( 
+
+    wp_register_script(
        $value['handle'],
        $value['src'],
        $value['deps'],
        $value['ver'],
        $value['in_footer']
     );
-    
-    wp_enqueue_script( 
+
+    wp_enqueue_script(
        $value['handle'],
        $value['src'],
        $value['deps'],
@@ -143,7 +143,7 @@ function alsmith_backend_scripts() {
 }
 
 function alsmith_frontend_scripts() {
-  
+
   if (is_admin()) return;
 
   /**
@@ -174,8 +174,8 @@ function alsmith_frontend_scripts() {
     ),
   );
 
-  if(is_page( 'home' )) {
-    
+  if(is_page( 'home' ) || is_page_template( 'home-english.php' )) {
+
     array_push($scripts_array, $work_page = array (
       'handle'    => 'home-page',
       'src'       => get_template_directory_uri() . '/js/home.js',
@@ -185,8 +185,8 @@ function alsmith_frontend_scripts() {
     ));
   }
 
-  if(is_page_template( 'metodologia.php' )) {
-    
+  if(is_page_template( 'metodologia.php' ) || is_page_template( 'metodologia-english.php' )) {
+
     array_push($scripts_array, $news_page = array (
       'handle'    => 'metodologia-page',
       'src'       => get_template_directory_uri() . '/js/metodologia.js',
@@ -195,8 +195,8 @@ function alsmith_frontend_scripts() {
       'ver'       => '1.0'
     ));
   }
-  elseif (is_page_template( 'servicios.php' )) {
-    
+  elseif (is_page_template( 'servicios.php' ) || is_page_template( 'servicios-english.php' )) {
+
     array_push($scripts_array, $news_page = array (
       'handle'    => 'servicios-page',
       'src'       => get_template_directory_uri() . '/js/servicios.js',
@@ -205,8 +205,8 @@ function alsmith_frontend_scripts() {
       'ver'       => '1.0'
     ));
   }
-  elseif (is_page_template( 'ana-luz.php' )) {
-    
+  elseif (is_page_template( 'ana-luz.php' ) || is_page_template( 'ana-luz-english.php' )) {
+
     array_push($scripts_array, $news_page = array (
       'handle'    => 'ana-luz-page',
       'src'       => get_template_directory_uri() . '/js/ana-luz.js',
@@ -215,8 +215,8 @@ function alsmith_frontend_scripts() {
       'ver'       => '1.0'
     ));
   }
-  elseif (is_page_template( 'contacto.php' )) {
-    
+  elseif (is_page_template( 'contacto.php' ) || is_page_template( 'contacto-english.php' )) {
+
     array_push($scripts_array, $news_page = array (
       'handle'    => 'contacto-page',
       'src'       => get_template_directory_uri() . '/js/contacto.js',
@@ -226,18 +226,18 @@ function alsmith_frontend_scripts() {
     ));
   }
 
- 
+
   foreach($scripts_array as $value) {
 
-    wp_register_script( 
+    wp_register_script(
        $value['handle'],
        $value['src'],
        $value['deps'],
        $value['ver'],
        $value['in_footer']
     );
-    
-    wp_enqueue_script( 
+
+    wp_enqueue_script(
        $value['handle'],
        $value['src'],
        $value['deps'],

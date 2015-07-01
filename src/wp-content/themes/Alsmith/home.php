@@ -5,14 +5,18 @@
  */
 $tagline = get_field("parte_uno");
 $tagline_landing = get_field("parte_dos");//the_content();//get_the_content();
-$bg_img = wp_get_attachment_image_src( get_post_thumbnail_id( $query->ID ),"full" );  
+$bg_img = wp_get_attachment_image_src( get_post_thumbnail_id( $query->ID ),"full" );
 
 // $bg_img = get_the_post_thumbnail( $query->ID );
 
 //Create a new WP_Query Object
-$contacto = new WP_Query("category_name=contacto");
+$args = array(
+	'category_name' => "contacto",
+	'tag' => 'espanol'
+);
+$contacto = new WP_Query($args);
 
-// consider using get_posts() function it might be cleaner 
+// consider using get_posts() function it might be cleaner
 
 
 ?>
@@ -25,16 +29,16 @@ $contacto = new WP_Query("category_name=contacto");
 
 	<?php if( $contacto->have_posts() ) :?>
   <?php while ($contacto->have_posts()) : $contacto->the_post(); ?>
-  
-  	
+
+
   <div class="top row  ">
 	  <div class="col-xs-7 col-sm-5 col-md-4 col-lg-3 img " >
 			<img class="img-responsive" src="<?php echo get_header_image() ?>">
 	  </div>
   <h1  id="tagline"><?php echo $tagline_landing; ?></h1>
   </div>
- 	
-	    
+
+
 		<div class="row">
 			<div class=" info" >
 				<div class="content col-sm-6 col-md-4 ">
@@ -65,11 +69,20 @@ $contacto = new WP_Query("category_name=contacto");
 			<h1 class="intro"><?php echo $tagline; ?></h1>
 			<?php
 				wp_reset_query();
-				$query = new WP_Query("category_name=Home");
+				// search filter
+
+				$argsTwo = array(
+					'category_name' => "home",
+					'tag' => "espanol"
+				);
+
+				$query = new WP_Query($argsTwo);
+				// var_dump($query);
+				// $query = new WP_Query("category_name=Home");
 				$panelNumeber = 0;
 				 if( $query->have_posts() ) :
-					 while ($query->have_posts()) : $query->the_post(); 
-						 ?> 
+					 while ($query->have_posts()) : $query->the_post();
+						 ?>
 						<div class="col-xs-12 col-md-6 col-lg-3 intro">
 							<?php $panelNumeber = $panelNumeber + 1; ?>
 							    <!-- <div class="panel-heading" role="tab" id="heading-<?php echo $panelNumeber?>"> -->
@@ -106,9 +119,9 @@ $contacto = new WP_Query("category_name=contacto");
 							       	 <?php echo $svg; ?>
 							       </div>
 
-							        
 
-											<?php 
+
+											<?php
 												$my_excerpt = the_excerpt();
 
 												// echo $my_excerpt; // Outputs the processed value to the page
@@ -118,16 +131,16 @@ $contacto = new WP_Query("category_name=contacto");
 						</div>
 			<?php
 					endwhile;
-				endif; 
+				endif;
 			?>
- 	 	
+
  	 		<div id="enviar-cv-wrapper">
- 	 		<button class="row" id="enviar-cv">Envianos tu CV 
+ 	 		<button class="row" id="enviar-cv">Envianos tu CV
  	 		<!-- <span class="glyphicon glyphicon-file"></span> -->
- 	 		</button>	
+ 	 		</button>
  	 		</div>
- 	 		
- 	 	
+
+
 
 </div><!-- /main -->
 

@@ -5,7 +5,12 @@
  */
 
 //Create a new WP_Query Object
-$query = new WP_Query("category_name=metodologia&post_status=publish");
+$args = array(
+	'category_name' => "metodologia",
+	'post_status' => "publish",
+	'tag' => 'espanol'
+ );
+$query = new WP_Query($args);
 $panelNumeber =0;
 ?>
 
@@ -28,18 +33,18 @@ $panelNumeber =0;
 							    </div>
 							    <div id="collapse-<?php echo $panelNumeber ?>" class="panel-collapse collapse e <?php if ($panelNumeber ==1) echo 'in'?>" role="tabpanel" aria-labelledby="headingOne">
 							      <div class="panel-body" style="background-image: url(<?php  get_the_post_thumbnail( $query->ID, 'large' );?> )">
-							         <?php the_content() ;?> 
-							         <?php 
+							         <?php the_content() ;?>
+							         <?php
 							         	$addendums = get_field("apendice");
 							         	// var_dump($addendums);
 							         	echo $addendums->post_content;
-							         ?> 
+							         ?>
 							      </div>
 							    </div>
 							</div>
 						</div>
-	<?php 
-			endwhile; 
+	<?php
+			endwhile;
 		endif; ?>
 
 

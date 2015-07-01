@@ -1,11 +1,11 @@
 <?php	//
     // don't show the toolbar // more info at http://codex.wordpress.org/Function_Reference/show_admin_bar
     show_admin_bar( false );
-    
-    
+
+
     // Add RSS links to <head> section
     automatic_feed_links();
-    
+
     // Load jQuery
     if ( !is_admin() ) {
         wp_deregister_script('jquery');
@@ -20,7 +20,7 @@
     }
     add_action('init', 'removeHeadLinks');
     remove_action('wp_head', 'wp_generator');
-    
+
 	// Declare sidebar widget zone
     if (function_exists('register_sidebar')) {
     	register_sidebar(array(
@@ -36,7 +36,8 @@
     if(function_exists('register_nav_menus')){
         register_nav_menus(
             array(
-                'main_nav' => 'Main Navigation'
+                'main_nav' => 'Main Navigation',
+                'main_nav_english' => 'Main Navigation English'
                 )
             );
     }
@@ -64,9 +65,9 @@ add_theme_support( 'custom-header', $defaults );
 // consider this
 // add_image_size('vantage-carousel', 272, 182, true);
 
-if ( function_exists ('register_sidebar')) { 
-    register_sidebar ('custom'); 
-} 
+if ( function_exists ('register_sidebar')) {
+    register_sidebar ('custom');
+}
 
 
 

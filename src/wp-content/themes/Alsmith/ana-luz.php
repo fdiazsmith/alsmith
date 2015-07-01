@@ -1,23 +1,27 @@
 <?php
 /*
- * Template Name: Ana Luz
+ * Template Name: Ana Luz 
  * Description: Description
  */
-
+$args = array(
+	"category_name" => "ana-luz",
+	"tag" => "espanol"
+);
 //Create a new WP_Query Object
-$query = new WP_Query("category_name=ana-luz");
+$query = new WP_Query($args);
 $panelNumeber =0;
 
 ?>
+
 
 <?php get_header(); ?>
 
 <div id="main">
 
 			<?php if( $query->have_posts() ) :
-				 			while ($query->have_posts()) : $query->the_post(); 
+				 			while ($query->have_posts()) : $query->the_post();
 					$bg_img = wp_get_attachment_image_src( get_post_thumbnail_id( $query->ID ),"full" );
-					
+
 
 				 			?>
 								<?php $panelNumeber = $panelNumeber + 1; ?>
@@ -29,13 +33,14 @@ $panelNumeber =0;
 									          <?php the_title() ?>
 									      </h1>
 									    </div>
-									    
+
 									      <div class="d" style="">
 									        <?php the_content() ?>
 									      </div>
-									    
-			<?php 
-						endwhile; 
+
+			<?php
+						endwhile;
 			 		endif; ?>
 </div><!-- /main -->
+
 <?php get_footer(); ?>

@@ -1,12 +1,16 @@
 <?php
 /*
  * Template Name: Servicios
- * Description: Describe servicios que ofreces aqui. 
+ * Description: Describe servicios que ofreces aqui.
  */
 
 //Create a new WP_Query Object
 // $query = new WP_Query("category_name=servicios&tag_name=algo");
-$query = new WP_Query("category_name=servicios");
+$args = array(
+	'category_name' => 'servicios',
+	'tag' => 'espanol'
+	);
+$query = new WP_Query($args);
 
 ?>
 
@@ -19,19 +23,19 @@ $query = new WP_Query("category_name=servicios");
 				 if( $query->have_posts() ) :
 				 			while ($query->have_posts()) : $query->the_post();
 				 				$ID  = basename(get_permalink()); //sanitize_title_with_dashes($title, "blank", "save"); ?>
-	
+
 				        <li role="presentation" class="<?php if ($counter == 1 )echo 'active'; ?>">
 				        	<a href="#<?php echo $ID?>" aria-controls="<?php echo $ID?>" role="tab" data-toggle="tab">
 				        		<?php the_title() ?>
 			        		</a>
 		        		</li>
 			<?php $counter++;
-							endwhile; 
+							endwhile;
 			 		endif; ?>
 	 		</ul>
 
 
-	
+
 	  <div class="tab-content">
 			<?php $counter = 1;
 					if( $query->have_posts() ) :
@@ -40,10 +44,10 @@ $query = new WP_Query("category_name=servicios");
 								  	    <div role="tabpanel" class="tab-pane fade  <?php if ($counter == 1 )echo 'active in'; ?>" id="<?php echo $ID?>">
 								  	    	<?php the_content() ?>
 								  	    </div>
-									        
-									 
+
+
 			<?php $counter++;
-							endwhile; 
+							endwhile;
 			 		endif; ?>
 	 		</div>
 

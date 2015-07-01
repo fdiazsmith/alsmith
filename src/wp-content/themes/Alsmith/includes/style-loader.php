@@ -35,7 +35,7 @@
       'media'     => 'screen',
       'ver'       => '1.0'
     ));
-    // main styles 
+    // main styles
     array_push($styles_array, $main = array (
       'handle'    => 'main',
       'src'       => get_template_directory_uri() . '/css/main.css',
@@ -44,7 +44,7 @@
       'ver'       => '1.0'
     ));
 
-  
+
     switch($page_title) {
 
       case 'home' : //home page styles
@@ -60,12 +60,12 @@
         break;
 
 
-      case 'Metodologia' : //work page styles 
+      case 'Metodologia' : //work page styles
       //it was not working for metodologia.
       break;
 
     } //endswitch (page)
-    if(is_page_template( 'metodologia.php' )){
+    if(is_page_template( 'metodologia.php' ) || is_page_template( 'metodologia-english.php' )){
               array_push($styles_array, $home_page = array (
           'handle'    => 'metodologia-page',
           'src'       => get_template_directory_uri() . '/css/metodologia.css',
@@ -75,7 +75,7 @@
         ));
 
     }
-    elseif(is_page_template( 'servicios.php' )){
+    elseif(is_page_template( 'servicios.php' ) || is_page_template( 'servicios-english.php' )){
               array_push($styles_array, $home_page = array (
           'handle'    => 'servicios-page',
           'src'       => get_template_directory_uri() . '/css/servicios.css',
@@ -85,7 +85,7 @@
         ));
 
     }
-    elseif(is_page_template( 'ana-luz.php' )){
+    elseif(is_page_template( 'ana-luz.php' ) || is_page_template( 'ana-luz-english.php' )){
               array_push($styles_array, $home_page = array (
           'handle'    => 'ana-luz-page',
           'src'       => get_template_directory_uri() . '/css/ana-luz.css',
@@ -94,7 +94,7 @@
           'ver'       => '1.0'
         ));
     }
-    elseif(is_page_template( 'contacto.php' )){
+    elseif(is_page_template( 'contacto.php' ) || is_page_template( 'contacto-english.php' )){
               array_push($styles_array, $home_page = array (
           'handle'    => 'contacto-page',
           'src'       => get_template_directory_uri() . '/css/contacto.css',
@@ -103,17 +103,26 @@
           'ver'       => '1.0'
         ));
     }
+    elseif(is_page_template( 'home-english.php' ) ){
+              array_push($styles_array, $home_page = array (
+          'handle'    => 'home-page',
+          'src'       => get_template_directory_uri() . '/css/home.css',
+          'deps'      => 'array()',
+          'media'     => 'screen',
+          'ver'       => '1.0'
+        ));
+    }
     foreach($styles_array as $value) {
 
-      wp_register_style( 
+      wp_register_style(
          $value['handle'],
          $value['src'],
          $value['deps'],
          $value['ver'],
          $value['media']
       );
-      
-      wp_enqueue_style( 
+
+      wp_enqueue_style(
          $value['handle'],
          $value['src'],
          $value['deps'],
@@ -124,7 +133,7 @@
   }
 
   /* ( ADMIN ) ENQUEUE STYLES
-     -------------------------------------------------- 
+     --------------------------------------------------
 
   add_action( 'admin_enqueue_scripts', 'enqueue_admin_styles' );
 
@@ -190,14 +199,14 @@
           break;
         case 'team'      :
           break;
-        case 'news'      : 
+        case 'news'      :
           break;
         case 'locations' :
           break;
         case 'clients'   :
           break;
         default          :
-          break; 
+          break;
 
       } //endswitch (posttype)
 
@@ -205,15 +214,15 @@
 
     foreach($styles_array as $value) {
 
-      wp_register_style( 
+      wp_register_style(
          $value['handle'],
          $value['src'],
          $value['deps'],
          $value['ver'],
          $value['media']
       );
-      
-      wp_enqueue_style( 
+
+      wp_enqueue_style(
          $value['handle'],
          $value['src'],
          $value['deps'],
